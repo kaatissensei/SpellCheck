@@ -192,9 +192,9 @@ func next_question():
 func _check_answer():
 	if %SpellingInput.text != "":
 		#Trim input
-		var guess: String = %SpellingInput.text.strip_edges().replace("'","’")
+		var guess: String = %SpellingInput.text.strip_edges().replace("’","'")
 		guess_array[current_number-1] = guess
-		if guess == current_word.english:
+		if guess == current_word.english.replace("’","'"):
 			#make something green
 			is_correct(true)
 		else:
