@@ -6,7 +6,7 @@ var tbl_name = "vocabulary"
 func _ready() -> void:
 	voc_db = SQLite.new()
 	voc_db.path="res://vocab"
-	#voc_db.read_only = true   #comment out to edit (duh)
+	voc_db.read_only = true   #comment out to edit (duh)
 	voc_db.open_db()
 	get_units()
 	
