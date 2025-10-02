@@ -142,6 +142,7 @@ func load_array():
 	resize_arrays(list_size)
 	shuffle_array()
 	test_word_num = shuffled_list.size()
+	%TestWordNumber.value = list_size
 
 func resize_arrays(new_size: int):
 	unanswered_array.clear()
@@ -274,3 +275,13 @@ func _go_home():
 func _change_test_word_num(new_num : float):
 	test_word_num = int(new_num)
 	%TestWordNumVal.text = "%d/%d words" % [test_word_num, current_list.size()]
+
+
+func _change_language(toggled_on: bool) -> void:
+	#var lang = "Vietnamese"
+	if toggled_on:
+		%WordToSpell.text = current_word.vietnamese
+		%SwitchLang.text = "日本語"
+	else:
+		%WordToSpell.text = current_word.japanese
+		%SwitchLang.text = "Tiếng Việt"

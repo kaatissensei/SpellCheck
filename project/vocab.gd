@@ -8,8 +8,9 @@ class_name Vocab extends Resource
 #@export var list_num : int
 @export var page_num : int
 @export var include : bool
+@export var vietnamese : String
 
-func _init(vocab_array: Array[String] = ["Eng", "”, 日本語", "3", "0", "U0"]):
+func _init(vocab_array: Array[String] = ["Eng", "”, 日本語", "3", "0", "U0", ""]):
 	#if vocab_array[6] == "〇": #Now doing in SELECT statement
 	populate_vocab(vocab_array)
 #OLD
@@ -25,5 +26,9 @@ func populate_vocab(vocab_array) :
 	grade_num = vocab_array[3].to_int()
 	page_num = vocab_array[4].to_int() 
 	unit = vocab_array[5]
+	#include not included
+	if vocab_array.size() > 6:
+		vietnamese = vocab_array[6]
+	
 	#list_num = vocab_array[5].to_int()
 	

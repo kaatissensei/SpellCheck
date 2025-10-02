@@ -92,7 +92,7 @@ func _set_unit(new_unit_num: String) -> void:
 func create_list_button(list : Array[Vocab]):
 		var new_btn = LIST_BTN.instantiate()
 		%ListSelect.add_child(new_btn)
-		new_btn.text = Main.array_to_str(list, 6, true) 
+		new_btn.text = Main.array_to_str(list, 6, true) #6 is limit, which should not be hardcoded like this
 		new_btn.name = "p%dVocab" % list[0].page_num
 		new_btn.connect("pressed", _select_list.bind(list[0].page_num))
 
@@ -171,3 +171,7 @@ func _set_wait_time(new_time : float):
 	Main.set_wait_time(new_time * 60)
 	
 	
+
+func _toggle_vietnamese(toggled_on: bool) -> void:
+	Main.vietnamese_on = toggled_on
+	%SwitchLang.visible = toggled_on

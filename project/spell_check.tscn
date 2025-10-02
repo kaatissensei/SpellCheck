@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://b31gwo4hvaj57"]
+[gd_scene load_steps=27 format=3 uid="uid://b31gwo4hvaj57"]
 
 [ext_resource type="Script" uid="uid://gi5ofb00rg56" path="res://spell_check.gd" id="1_coeig"]
 [ext_resource type="Theme" uid="uid://hwydebsyhm38" path="res://main_theme.tres" id="2_nwt03"]
@@ -71,6 +71,19 @@ gradient = SubResource("Gradient_ma4da")
 fill_to = Vector2(0, 0)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ptblg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uolxd"]
+bg_color = Color(0, 0.67058825, 0, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(3.2488256e-06, 0.52832663, 1.2513996e-06, 1)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vqdc1"]
 bg_color = Color(0.211765, 0.239216, 0.290196, 1)
@@ -459,6 +472,21 @@ theme = ExtResource("2_nwt03")
 icon = ExtResource("9_ptblg")
 icon_alignment = 1
 
+[node name="SwitchLang" type="Button" parent="CanvasLayer/QuizScene"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -278.0
+offset_bottom = 137.0
+grow_horizontal = 0
+theme = ExtResource("2_nwt03")
+theme_override_font_sizes/font_size = 50
+toggle_mode = true
+text = "Tiếng Việt"
+icon_alignment = 1
+
 [node name="TimerDisplay" type="RichTextLabel" parent="CanvasLayer/QuizScene"]
 unique_name_in_owner = true
 visible = false
@@ -619,6 +647,22 @@ theme = ExtResource("6_uolxd")
 theme_override_font_sizes/font_size = 50
 text = "Load List
 "
+
+[node name="LaguageBtn" type="Button" parent="CanvasLayer/MainMenu/StartMenu"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -76.0
+offset_right = 185.0
+grow_vertical = 0
+theme = ExtResource("2_nwt03")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/pressed = SubResource("StyleBoxFlat_uolxd")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_uolxd")
+toggle_mode = true
+text = "Tiếng Việt"
+icon_alignment = 1
 
 [node name="ListSelectMenu" type="Control" parent="CanvasLayer/MainMenu"]
 unique_name_in_owner = true
@@ -1141,9 +1185,11 @@ ignore_time_scale = true
 [connection signal="pressed" from="CanvasLayer/QuizScene/ResultsPopup/TryAgain" to="CanvasLayer/QuizScene" method="_redo_quiz"]
 [connection signal="pressed" from="CanvasLayer/QuizScene/ResultsPopup/BackToLists" to="CanvasLayer/QuizScene" method="_back_to_lists"]
 [connection signal="pressed" from="CanvasLayer/QuizScene/HomeBtn" to="CanvasLayer/QuizScene" method="_back_to_home"]
+[connection signal="toggled" from="CanvasLayer/QuizScene/SwitchLang" to="CanvasLayer/QuizScene" method="_change_language"]
 [connection signal="pressed" from="CanvasLayer/MainMenu/StartMenu/MarginContainer/ModeSelect/TimeAttack" to="." method="_set_mode" binds= [1]]
 [connection signal="pressed" from="CanvasLayer/MainMenu/StartMenu/MarginContainer/ModeSelect/Study" to="." method="_set_mode" binds= [0]]
 [connection signal="pressed" from="CanvasLayer/MainMenu/StartMenu/MarginContainer/ModeSelect/PracticeTest" to="." method="_set_mode" binds= [2]]
+[connection signal="toggled" from="CanvasLayer/MainMenu/StartMenu/LaguageBtn" to="." method="_toggle_vietnamese"]
 [connection signal="pressed" from="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/MarginContainer/TimeLimitSelect/1min" to="." method="_set_test_time" binds= [1]]
 [connection signal="pressed" from="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/MarginContainer/TimeLimitSelect/2min" to="." method="_set_test_time" binds= [2]]
 [connection signal="pressed" from="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/MarginContainer/TimeLimitSelect/3min" to="." method="_set_test_time" binds= [3]]

@@ -15,6 +15,8 @@ var current_page : int
 var current_screen : String #This should be an enum
 var wait_time : float
 
+var vietnamese_on : bool
+
 enum Game_Mode {study = 0, timed = 1, test = 2}
 @export var game_mode = Game_Mode.study
 

@@ -40,8 +40,8 @@ func _format_seconds(time : float, use_milliseconds : bool = false) -> String:
 	return "%02d:%02d:%02d" % [minutes, seconds, milliseconds]
 
 #----- TIMER FUNCTIONS -----
-func _start_timer(time : int = Main.wait_time):
-	timer.start(time)
+func _start_timer(time : float = Main.wait_time):
+	timer.start(int(time))
 	wait_time = timer.wait_time
 	
 func _stop_timer():
@@ -49,6 +49,7 @@ func _stop_timer():
 
 #----- STOPWATCH FUNCTIONS -----
 func _start_stopwatch():
+	_reset_time()
 	stopwatch_running = true
 	
 func _stop_stopwatch():
