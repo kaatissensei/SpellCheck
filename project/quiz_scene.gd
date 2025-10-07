@@ -76,6 +76,8 @@ func _ready_list():
 	#Change TestWordNumber slider vals
 	%TestWordNumber.max_value = current_list.size()
 	%TestWordNumber.tick_count = current_list.size() - 4 # min_value + 1
+	##WIP if Main.game_mode == 1: #timed
+		
 	if current_list.size() < 10:
 		%TestWordNumber.value = 5
 	else:
@@ -84,8 +86,11 @@ func _ready_list():
 	if current_list.size() < 5:
 		%TestWordNumber.min_value = 1
 		%TestWordNumber.max_value = current_list.size()
-	#Set to max if game_mode is study
-	if Main.game_mode == 0:
+		
+	#Set to max if game_mode is study or timed
+	if Main.game_mode == 0: #study
+		%TestWordNumber.value = current_list.size()
+	elif Main.game_mode == 1: #timed
 		%TestWordNumber.value = current_list.size()
 	
 	match Main.game_mode:

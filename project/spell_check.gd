@@ -88,6 +88,13 @@ func _set_unit(new_unit_num: String) -> void:
 	for page in unit_pages:
 		var list : Array[Vocab] = $SQLController.get_vocab_list(page)
 		create_list_button(list)
+	
+	if unit_pages.size() > 10:
+		%ListSelect.columns = 6
+	elif unit_pages.size() < 5:
+		%ListSelect.columns = 4
+	else:
+		%ListSelect.columns = 5
 
 func create_list_button(list : Array[Vocab]):
 		var new_btn = LIST_BTN.instantiate()

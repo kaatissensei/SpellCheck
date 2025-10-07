@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://b31gwo4hvaj57"]
+[gd_scene load_steps=28 format=3 uid="uid://b31gwo4hvaj57"]
 
 [ext_resource type="Script" uid="uid://gi5ofb00rg56" path="res://spell_check.gd" id="1_coeig"]
 [ext_resource type="Theme" uid="uid://hwydebsyhm38" path="res://main_theme.tres" id="2_nwt03"]
@@ -6,6 +6,7 @@
 [ext_resource type="Theme" uid="uid://iptgc6lni1ic" path="res://question_numbers.tres" id="3_avy18"]
 [ext_resource type="StyleBox" uid="uid://qxyhs5kiw3t2" path="res://enter_button.tres" id="4_avy18"]
 [ext_resource type="Script" uid="uid://dra2mg0357pmr" path="res://csv_handler.gd" id="5_ma4da"]
+[ext_resource type="FontFile" uid="uid://22xghwljyrgc" path="res://assets/Michroma-Regular.ttf" id="6_tya4r"]
 [ext_resource type="Theme" uid="uid://dmv7ndvgtkqfc" path="res://scroll_theme.tres" id="6_uolxd"]
 [ext_resource type="Theme" uid="uid://cowqb1n50w86d" path="res://results_theme.tres" id="7_avy18"]
 [ext_resource type="Script" uid="uid://d4hsvp4vbpl5f" path="res://timer_display.gd" id="9_g8vj4"]
@@ -287,8 +288,23 @@ size_flags_vertical = 3
 theme_override_constants/margin_left = 200
 theme_override_constants/margin_right = 200
 
+[node name="Underline" type="LineEdit" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+theme = ExtResource("2_nwt03")
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_tya4r")
+text = "____________________"
+alignment = 1
+max_length = 20
+keep_editing_on_text_submit = true
+caret_blink = true
+
 [node name="SpellingInput" type="LineEdit" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/MarginContainer"]
 unique_name_in_owner = true
+z_index = 1
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_nwt03")
@@ -297,11 +313,6 @@ alignment = 1
 max_length = 20
 keep_editing_on_text_submit = true
 caret_blink = true
-
-[node name="Line2D" type="Line2D" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/MarginContainer/SpellingInput"]
-position = Vector2(0, 5)
-points = PackedVector2Array(200, 225, 1320, 225)
-width = 5.0
 
 [node name="Control" type="Control" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -356,6 +367,7 @@ size_flags_horizontal = 3
 [node name="ResultsPopup" type="TextureRect" parent="CanvasLayer/QuizScene"]
 unique_name_in_owner = true
 visible = false
+z_index = 2
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -435,11 +447,13 @@ size_flags_horizontal = 3
 theme = ExtResource("7_avy18")
 
 [node name="TryAgain" type="Button" parent="CanvasLayer/QuizScene/ResultsPopup"]
-layout_mode = 0
-offset_left = 1619.0
-offset_top = 2.0
-offset_right = 1918.0
-offset_bottom = 139.0
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -299.0
+offset_bottom = 137.0
+grow_horizontal = 0
 mouse_default_cursor_shape = 2
 theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = ExtResource("4_avy18")
@@ -463,6 +477,7 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_3040f")
 text = "Back to lists"
 
 [node name="HomeBtn" type="Button" parent="CanvasLayer/QuizScene"]
+z_index = 2
 layout_mode = 0
 offset_left = 4.0
 offset_top = 4.0
@@ -507,6 +522,7 @@ script = ExtResource("9_g8vj4")
 
 [node name="MainMenu" type="Control" parent="CanvasLayer"]
 unique_name_in_owner = true
+z_index = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
