@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://b31gwo4hvaj57"]
+[gd_scene load_steps=29 format=3 uid="uid://b31gwo4hvaj57"]
 
 [ext_resource type="Script" uid="uid://gi5ofb00rg56" path="res://spell_check.gd" id="1_coeig"]
 [ext_resource type="Theme" uid="uid://hwydebsyhm38" path="res://main_theme.tres" id="2_nwt03"]
@@ -24,6 +24,8 @@ colors = PackedColorArray(0.277514, 0.277503, 0.325496, 1, 0.113665, 0.113665, 0
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_006op"]
 gradient = SubResource("Gradient_n6hn0")
 fill_to = Vector2(0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tya4r"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ip23a"]
 bg_color = Color(0.972549, 0, 0, 1)
@@ -285,6 +287,7 @@ vertical_alignment = 1
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 2
 theme_override_constants/margin_left = 200
 theme_override_constants/margin_right = 200
 
@@ -313,6 +316,14 @@ alignment = 1
 max_length = 20
 keep_editing_on_text_submit = true
 caret_blink = true
+
+[node name="Button" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tya4r")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tya4r")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tya4r")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_tya4r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tya4r")
 
 [node name="Control" type="Control" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -907,7 +918,7 @@ unique_name_in_owner = true
 layout_mode = 0
 offset_left = 172.0
 offset_top = 137.0
-offset_right = 910.0
+offset_right = 984.0
 offset_bottom = 1030.0
 size_flags_horizontal = 3
 theme = ExtResource("7_avy18")
@@ -957,7 +968,7 @@ z_index = 5
 layout_mode = 0
 offset_left = 170.0
 offset_top = 64.0
-offset_right = 907.0
+offset_right = 981.0
 offset_bottom = 139.0
 theme = ExtResource("6_uolxd")
 theme_override_font_sizes/normal_font_size = 45
@@ -974,9 +985,9 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -852.0
+offset_left = -820.0
 offset_top = -272.0
-offset_right = -152.0
+offset_right = -120.0
 offset_bottom = -207.0
 grow_horizontal = 0
 grow_vertical = 2
@@ -1065,9 +1076,9 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -852.0
+offset_left = -820.0
 offset_top = 56.0
-offset_right = -152.0
+offset_right = -120.0
 offset_bottom = 121.0
 grow_horizontal = 0
 grow_vertical = 2
@@ -1197,6 +1208,8 @@ unique_name_in_owner = true
 one_shot = true
 ignore_time_scale = true
 
+[connection signal="focus_entered" from="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/MarginContainer/SpellingInput" to="CanvasLayer/QuizScene" method="_on_spelling_input_focus_entered"]
+[connection signal="pressed" from="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/MarginContainer/Button" to="CanvasLayer/QuizScene" method="_focus_on_SpellingInput"]
 [connection signal="pressed" from="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/Margin/HBoxContainer/Pass" to="CanvasLayer/QuizScene" method="_skip_question"]
 [connection signal="pressed" from="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/Margin/HBoxContainer/Enter" to="CanvasLayer/QuizScene" method="_check_answer"]
 [connection signal="pressed" from="CanvasLayer/QuizScene/ResultsPopup/TryAgain" to="CanvasLayer/QuizScene" method="_redo_quiz"]

@@ -290,3 +290,7 @@ func _change_language(toggled_on: bool) -> void:
 	else:
 		%WordToSpell.text = current_word.japanese
 		%SwitchLang.text = "Tiếng Việt"
+
+
+func _focus_on_SpellingInput() -> void:
+	%SpellingInput.grab_focus()
