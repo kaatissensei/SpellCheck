@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://b31gwo4hvaj57"]
+[gd_scene load_steps=31 format=3 uid="uid://b31gwo4hvaj57"]
 
 [ext_resource type="Script" uid="uid://gi5ofb00rg56" path="res://spell_check.gd" id="1_coeig"]
 [ext_resource type="Theme" uid="uid://hwydebsyhm38" path="res://main_theme.tres" id="2_nwt03"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://b0bpr3gx7ndrn" path="res://images/Home Icon.svg" id="9_ptblg"]
 [ext_resource type="Script" uid="uid://bwq6akl3cxggl" path="res://csv/lists.gd" id="10_3040f"]
 [ext_resource type="FontFile" uid="uid://bk8aekaq2034" path="res://assets/Goldman-Regular.ttf" id="10_vqdc1"]
+[ext_resource type="Texture2D" uid="uid://di1es0lcxtxt8" path="res://images/Restart Icon.svg" id="11_jy0k8"]
 [ext_resource type="Texture2D" uid="uid://dp2lm8cx44gge" path="res://images/StopwatchIcon_300.svg" id="11_vqdc1"]
 [ext_resource type="Script" uid="uid://1ku5al82vgct" path="res://sql_controller.gd" id="12_3wx56"]
 [ext_resource type="Texture2D" uid="uid://ccv56d1fqjl7e" path="res://images/PaperIcon_300.svg" id="12_uolxd"]
@@ -72,6 +73,15 @@ colors = PackedColorArray(0.212458, 0.212482, 0.277512, 1, 1, 1, 1, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_3040f"]
 gradient = SubResource("Gradient_ma4da")
 fill_to = Vector2(0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mkej7"]
+bg_color = Color(0.11764706, 0.11764706, 0.12156863, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.1664992, 0.19344494, 0.2293736, 1)
+border_blend = true
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ptblg"]
 
@@ -393,8 +403,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 386.0
-offset_right = -405.0
+offset_left = 342.0
+offset_right = -361.0
 offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -516,20 +526,36 @@ icon_alignment = 1
 
 [node name="TimerDisplay" type="RichTextLabel" parent="CanvasLayer/QuizScene"]
 unique_name_in_owner = true
-visible = false
-layout_mode = 0
-offset_left = 1706.0
-offset_right = 1920.0
-offset_bottom = 107.0
-grow_horizontal = 2
+layout_mode = 1
+offset_left = 145.0
+offset_top = 10.0
+offset_right = 359.0
+offset_bottom = 134.0
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.35
 theme = ExtResource("2_nwt03")
 theme_override_font_sizes/normal_font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_mkej7")
 text = "00:00"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("9_g8vj4")
+
+[node name="Restart" type="Button" parent="CanvasLayer/QuizScene"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -140.0
+offset_top = 4.0
+offset_right = -3.0
+offset_bottom = 141.0
+grow_horizontal = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_nwt03")
+theme_override_font_sizes/font_size = 60
+icon = ExtResource("11_jy0k8")
+icon_alignment = 1
 
 [node name="MainMenu" type="Control" parent="CanvasLayer"]
 unique_name_in_owner = true
@@ -1216,6 +1242,7 @@ ignore_time_scale = true
 [connection signal="pressed" from="CanvasLayer/QuizScene/ResultsPopup/BackToLists" to="CanvasLayer/QuizScene" method="_back_to_lists"]
 [connection signal="pressed" from="CanvasLayer/QuizScene/HomeBtn" to="CanvasLayer/QuizScene" method="_back_to_home"]
 [connection signal="toggled" from="CanvasLayer/QuizScene/SwitchLang" to="CanvasLayer/QuizScene" method="_change_language"]
+[connection signal="pressed" from="CanvasLayer/QuizScene/Restart" to="CanvasLayer/QuizScene" method="_redo_quiz"]
 [connection signal="pressed" from="CanvasLayer/MainMenu/StartMenu/MarginContainer/ModeSelect/TimeAttack" to="." method="_set_mode" binds= [1]]
 [connection signal="pressed" from="CanvasLayer/MainMenu/StartMenu/MarginContainer/ModeSelect/Study" to="." method="_set_mode" binds= [0]]
 [connection signal="pressed" from="CanvasLayer/MainMenu/StartMenu/MarginContainer/ModeSelect/PracticeTest" to="." method="_set_mode" binds= [2]]
