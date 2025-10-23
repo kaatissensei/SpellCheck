@@ -200,7 +200,7 @@ func _check_answer():
 		#Trim input
 		var guess: String = %SpellingInput.text.strip_edges().replace("’","'")
 		guess_array[current_number-1] = guess
-		if guess == current_word.english.replace("’","'"):
+		if guess == current_word.english.strip_edges().replace("’","'"):
 			#make something green
 			is_correct(true)
 		else:
