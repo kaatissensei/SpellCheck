@@ -1,11 +1,30 @@
-[gd_scene load_steps=4 format=3 uid="uid://b0ary7344f5jf"]
+[gd_scene load_steps=6 format=3 uid="uid://b0ary7344f5jf"]
 
 [ext_resource type="Theme" uid="uid://cqyf7s5xv1te" path="res://menu_theme.tres" id="1_mui2x"]
-[ext_resource type="Script" uid="uid://c13enj0b0xkp7" path="res://result_vocab_check.gd" id="1_skl7s"]
+[ext_resource type="Script" uid="uid://c13enj0b0xkp7" path="res://scripts/result_vocab_check.gd" id="1_skl7s"]
 [ext_resource type="Theme" uid="uid://cowqb1n50w86d" path="res://results_theme.tres" id="1_yfbq4"]
 
-[node name="Control" type="HBoxContainer"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mui2x"]
+bg_color = Color(1, 0, 0, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 0, 0, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d3eek"]
+bg_color = Color(1, 0, 0, 0.48235294)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 0, 0, 1)
+border_blend = true
+
+[node name="Control" type="Control"]
 custom_minimum_size = Vector2(0, 120)
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -15,10 +34,18 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 2
 theme = ExtResource("1_mui2x")
-theme_override_constants/separation = 0
 script = ExtResource("1_skl7s")
 
-[node name="Number" type="RichTextLabel" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="Number" type="RichTextLabel" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.15
@@ -29,7 +56,21 @@ bbcode_enabled = true
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Japanese" type="RichTextLabel" parent="."]
+[node name="Button" type="Button" parent="HBoxContainer/Number"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_mui2x")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_d3eek")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d3eek")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_d3eek")
+
+[node name="Japanese" type="RichTextLabel" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 2
@@ -40,7 +81,7 @@ text = "絶滅の危機にさらされている"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Answer" type="RichTextLabel" parent="."]
+[node name="Answer" type="RichTextLabel" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 2

@@ -27,7 +27,7 @@ func populate_units_menu():
 		unit_btn.size_flags_vertical = Control.SIZE_EXPAND_FILL
 		unit_btn.text = u.replace("-", "")
 		%UnitSelect.add_child(unit_btn)
-		unit_btn.connect("pressed", _set_unit.bind(u))
+		unit_btn.connect("pressed", _select_unit.bind(u))
 
 func get_list_options(grade: int = 3, unit: int = 4):
 	#var unit_list : Array
@@ -44,7 +44,7 @@ func get_list_options(grade: int = 3, unit: int = 4):
 		add_lists_to_menu()
 
 func add_lists_to_menu():
-	print(unit_lists.size())
+	#print(unit_lists.size())
 	if unit_lists.size() > 8 || unit_lists.size() == 5:
 		%ListSelect.columns = 5
 	else:
@@ -71,10 +71,11 @@ func _select_list(page_num: int):
 	#Switch Main Menu back to unit select
 	#show_list_select_menus(%GradeSelect)
 
-func _set_unit(new_unit_num: String) -> void:
+func _select_unit(new_unit_num: String) -> void:
 	Main.current_unit = new_unit_num
 	for vlist in %ListSelect.get_children():
 		vlist.queue_free()
+		
 	if Main.use_db:
 		pass
 	else:
@@ -83,11 +84,20 @@ func _set_unit(new_unit_num: String) -> void:
 	%ListSelect.visible = true
 	%ListSelectMenuText.text = "Which list?"
 	Main.current_screen = "ListSelect"
-	var unit_pages : Array[int] = $SQLController.get_page_nums(new_unit_num)
-	
-	for page in unit_pages:
-		var list : Array[Vocab] = $SQLController.get_vocab_list(page)
-		create_list_button(list)
+	var unit_pages : Array[int]
+	if Main.use_my_list:
+		#use custom list
+		pass
+		var custom_lists = %MyList._get_my_vocab_lists()
+		var i : int = 0
+		for list in custom_lists:
+			create_list_button(list, i)
+			i += 1
+	else:
+		unit_pages = $SQLController._get_page_nums(new_unit_num)
+		for page in unit_pages:
+			var list : Array[Vocab] = $SQLController.get_vocab_list(page)
+			create_list_button(list)
 	
 	if unit_pages.size() > 10:
 		%ListSelect.columns = 6
@@ -96,12 +106,17 @@ func _set_unit(new_unit_num: String) -> void:
 	else:
 		%ListSelect.columns = 5
 
-func create_list_button(list : Array[Vocab]):
+func create_list_button(list : Array[Vocab], _custom_page: int = 0):
 		var new_btn = LIST_BTN.instantiate()
 		%ListSelect.add_child(new_btn)
-		new_btn.text = Main.array_to_str(list, 6, true) #6 is limit, which should not be hardcoded like this
-		new_btn.name = "p%dVocab" % list[0].page_num
-		new_btn.connect("pressed", _select_list.bind(list[0].page_num))
+		new_btn.text = Main.array_to_str(list, 6, true, _custom_page) #6 is limit, which should not be hardcoded like this
+		if !Main.use_my_list:
+			new_btn.name = "p%dVocab" % list[0].page_num
+			new_btn.connect("pressed", _select_list.bind(list[0].page_num))
+		else:
+			new_btn.name = %MyList.my_lists[Main.current_page].Name
+			new_btn.connect("pressed", _select_list.bind(_custom_page))
+			
 
 func _set_mode(new_mode):
 	var new_game_mode : Main.Game_Mode
@@ -116,7 +131,7 @@ func _set_mode(new_mode):
 			new_game_mode = Main.Game_Mode.test
 			%TimerProgress.visible = true
 	
-	show_list_select_menus(%GradeSelect)
+	show_list_select_menus(%GradeSelectTop)
 	Main.set_game_mode(new_game_mode)
 	
 	#%ModeSelect.visible = false
@@ -134,18 +149,18 @@ func _set_grade(new_grade: int) -> void:
 
 func _set_test_time(time_limit : int) -> void:
 	Main.time_limit = time_limit * 60
-	show_list_select_menus(%GradeSelect)
+	show_list_select_menus(%GradeSelectTop)
 
 func show_list_select_menus(selected_menu : Control):
 	%TimeLimitSelect.visible = false
 	%ModeSelect.visible = false
-	%GradeSelect.visible = false
+	%GradeSelectTop.visible = false
 	%UnitSelect.visible = false
 	%ListSelect.visible = false
 	
 	selected_menu.visible = true
 	match selected_menu.name:
-		"GradeSelect":
+		"GradeSelectTop":
 			%ListSelectMenuText.text = "Which grade?"
 		"UnitSelect":
 			%ListSelectMenuText.text = "Which unit?"
@@ -161,7 +176,7 @@ func _go_back(current_screen: String = Main.current_screen):
 		"GradeSelect":
 			%QuizScene._go_home()
 		"UnitSelect":
-			show_list_select_menus(%GradeSelect)
+			show_list_select_menus(%GradeSelectTop)
 		"ListSelect":
 			show_list_select_menus(%UnitSelect)
 		"ReadyMenu":
@@ -182,3 +197,8 @@ func _set_wait_time(new_time : float):
 func _toggle_vietnamese(toggled_on: bool) -> void:
 	Main.vietnamese_on = toggled_on
 	%SwitchLang.visible = toggled_on
+
+func _close_my_list_window() -> void:
+	%MyList.save_list()
+	_select_unit("My_List")
+	%MyList.visible = false

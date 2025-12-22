@@ -31,12 +31,14 @@ func _gui_input(event):
 
 func load_list(grade: int = Main.current_grade, unit: String = Main.current_unit, page_num: int = Main.current_page):
 	Main.set_list_ids(grade, unit, page_num)
-	if Main.use_db:
-		var v_list : Array[Vocab] = %SQLController.get_vocab_list(page_num)
-		Main.set_list_array(v_list)
+	#if !Main.use_db:
+	#else:
+	var v_list : Array[Vocab]
+	if !Main.use_my_list:
+		v_list = %SQLController.get_vocab_list(page_num)
 	else:
-		#Main.set_list_array(%CSVFile.get_list(grade, unit, list_num))
-		pass
+		v_list = %MyList._get_my_vocab_lists(page_num)
+	Main.set_list_array(v_list)
 
 	
 func _start_quiz(_grade: int = Main.current_grade, 
@@ -66,24 +68,27 @@ func _ready_list():
 	#Fill list preview with English list
 	#var str_list = Main.array_to_str(current_list)
 	##%ListPreview.text = str_list
-	%ListPreviewLabel.text = "NEW WORDS %d年生 %s p.%d" % [Main.current_grade, Main.current_unit, Main.current_page]
+	if !Main.use_my_list:
+		%ListPreviewLabel.text = "NEW WORDS %d年生 %s p.%d" % [Main.current_grade, Main.current_unit, Main.current_page]
+	else:
+		%ListPreviewLabel.text = %MyList.my_lists[Main.current_page].Name
 	#Fill list preview with Eng/Jpn boxes
 	%ListPreview.text = ""
 
 	populate_list_preview()
 	_change_test_word_num(10)
-	
+	##WIP
 	#Change TestWordNumber slider vals
 	%TestWordNumber.max_value = current_list.size()
 	%TestWordNumber.tick_count = current_list.size() - 4 # min_value + 1
-	##WIP if Main.game_mode == 1: #timed
+
 		
 	if current_list.size() < 10:
 		%TestWordNumber.value = 5
 	else:
 		%TestWordNumber.value = 10
 	#Change min if list is <5 words (shouldn't be, but just in case)
-	if current_list.size() < 5:
+	if current_list.size() <= 5:
 		%TestWordNumber.min_value = 1
 		%TestWordNumber.max_value = current_list.size()
 		
@@ -103,6 +108,9 @@ func _ready_list():
 		2: #test
 			%TestTimer.visible = true
 			%TestWordNumber.visible = true
+
+func switch_ready_language():
+	pass
 
 func populate_list_preview():
 	#Clear children first
@@ -271,14 +279,19 @@ func _go_home():
 	%MainMenu.visible = true
 	#Switch Main Menu back to unit select
 	%StartMenu.visible = true
-	%GradeSelect.visible = false
+	%GradeSelectTop.visible = false
 	%ListSelect.visible = false
 	%UnitSelect.visible = false
 	%ListSelectMenu.visible = false
 	%ReadyMenu.visible = false
+	%MyList.visible = false
+	
+	Main.use_my_list = false
 
 func _change_test_word_num(new_num : float):
 	test_word_num = int(new_num)
+	if test_word_num > current_list.size():
+		test_word_num = current_list.size()
 	%TestWordNumVal.text = "%d/%d words" % [test_word_num, current_list.size()]
 
 

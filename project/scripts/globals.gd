@@ -1,6 +1,7 @@
 extends Node
 
 var use_db : bool = true
+var use_my_list : bool = false
 var csvFile
 var default_lists
 var csv_array = []
@@ -19,6 +20,8 @@ var vietnamese_on : bool
 
 enum Game_Mode {study = 0, timed = 1, test = 2}
 @export var game_mode = Game_Mode.study
+
+var custom_lists : Array
 
 func _ready() -> void:
 	wait_time = 180
@@ -56,13 +59,19 @@ func set_list_array(new_array: Array):
 	list_array.clear()
 	list_array.assign(new_array)
 
-func array_to_str(array: Array, limit: int = 100, include_header : bool = false) -> String:
+func array_to_str(array: Array, limit: int = 100, include_header: bool = false, custom_pg: int = 0) -> String:
 	var pg : int
 	var arr_str : String
-
-	pg = array[0].page_num
+	if !use_my_list:
+		pg = array[0].page_num
+	else:
+		pg = custom_pg
 	if include_header:
-		arr_str = "NEW WORDS p" + str(pg) + "\n"
+		if !use_my_list:
+			arr_str = "NEW WORDS p" + str(pg) + "\n"
+		else:
+			#arr_str = "My List " + str(pg) + "\n"
+			arr_str = get_tree().get_root().get_node("SpellCheck/CanvasLayer/MyList").my_lists[pg].Name + "\n"
 	
 	if array.size() < limit:
 		for v in array:

@@ -1,23 +1,34 @@
-[gd_scene load_steps=31 format=3 uid="uid://b31gwo4hvaj57"]
+[gd_scene load_steps=60 format=3 uid="uid://b31gwo4hvaj57"]
 
-[ext_resource type="Script" uid="uid://gi5ofb00rg56" path="res://spell_check.gd" id="1_coeig"]
+[ext_resource type="Script" uid="uid://gi5ofb00rg56" path="res://scripts/spell_check.gd" id="1_coeig"]
 [ext_resource type="Theme" uid="uid://hwydebsyhm38" path="res://main_theme.tres" id="2_nwt03"]
-[ext_resource type="Script" uid="uid://b50m2r3gr61n3" path="res://quiz_scene.gd" id="2_qkgq2"]
+[ext_resource type="Script" uid="uid://b50m2r3gr61n3" path="res://scripts/quiz_scene.gd" id="2_qkgq2"]
 [ext_resource type="Theme" uid="uid://iptgc6lni1ic" path="res://question_numbers.tres" id="3_avy18"]
 [ext_resource type="StyleBox" uid="uid://qxyhs5kiw3t2" path="res://enter_button.tres" id="4_avy18"]
-[ext_resource type="Script" uid="uid://dra2mg0357pmr" path="res://csv_handler.gd" id="5_ma4da"]
+[ext_resource type="Script" uid="uid://dra2mg0357pmr" path="res://scripts/csv_handler.gd" id="5_ma4da"]
 [ext_resource type="FontFile" uid="uid://22xghwljyrgc" path="res://assets/Michroma-Regular.ttf" id="6_tya4r"]
 [ext_resource type="Theme" uid="uid://dmv7ndvgtkqfc" path="res://scroll_theme.tres" id="6_uolxd"]
 [ext_resource type="Theme" uid="uid://cowqb1n50w86d" path="res://results_theme.tres" id="7_avy18"]
-[ext_resource type="Script" uid="uid://d4hsvp4vbpl5f" path="res://timer_display.gd" id="9_g8vj4"]
-[ext_resource type="Texture2D" uid="uid://b0bpr3gx7ndrn" path="res://images/Home Icon.svg" id="9_ptblg"]
+[ext_resource type="Script" uid="uid://d4hsvp4vbpl5f" path="res://scripts/timer_display.gd" id="9_g8vj4"]
+[ext_resource type="Texture2D" uid="uid://b0bpr3gx7ndrn" path="res://images/ui/Home Icon.svg" id="9_ptblg"]
 [ext_resource type="Script" uid="uid://bwq6akl3cxggl" path="res://csv/lists.gd" id="10_3040f"]
 [ext_resource type="FontFile" uid="uid://bk8aekaq2034" path="res://assets/Goldman-Regular.ttf" id="10_vqdc1"]
-[ext_resource type="Texture2D" uid="uid://di1es0lcxtxt8" path="res://images/Restart Icon.svg" id="11_jy0k8"]
-[ext_resource type="Texture2D" uid="uid://dp2lm8cx44gge" path="res://images/StopwatchIcon_300.svg" id="11_vqdc1"]
-[ext_resource type="Script" uid="uid://1ku5al82vgct" path="res://sql_controller.gd" id="12_3wx56"]
-[ext_resource type="Texture2D" uid="uid://ccv56d1fqjl7e" path="res://images/PaperIcon_300.svg" id="12_uolxd"]
-[ext_resource type="Texture2D" uid="uid://dv12dt8x71hvy" path="res://images/Back icon.svg" id="13_uolxd"]
+[ext_resource type="Texture2D" uid="uid://di1es0lcxtxt8" path="res://images/ui/Restart Icon.svg" id="11_jy0k8"]
+[ext_resource type="Texture2D" uid="uid://dp2lm8cx44gge" path="res://images/ui/StopwatchIcon_300.svg" id="11_vqdc1"]
+[ext_resource type="Script" uid="uid://1ku5al82vgct" path="res://scripts/sql_controller.gd" id="12_3wx56"]
+[ext_resource type="Texture2D" uid="uid://ccv56d1fqjl7e" path="res://images/ui/PaperIcon_300.svg" id="12_uolxd"]
+[ext_resource type="Texture2D" uid="uid://dv12dt8x71hvy" path="res://images/ui/Back icon.svg" id="13_uolxd"]
+[ext_resource type="Script" uid="uid://c7dnf821jvm1x" path="res://scripts/my_list.gd" id="16_mkej7"]
+[ext_resource type="Texture2D" uid="uid://bldcpbj0mrm6" path="res://images/ui/checkbox_checked.svg" id="17_3ohd7"]
+[ext_resource type="FontFile" uid="uid://cb3y2lj6o0j73" path="res://assets/NotoSansJP-Medium.ttf" id="17_cj2sj"]
+[ext_resource type="Texture2D" uid="uid://b4jhjm67f7xvt" path="res://images/ui/SaveIcon200.svg" id="17_y8od1"]
+[ext_resource type="Texture2D" uid="uid://w3abrj16e4k7" path="res://images/ui/Dropdown_filled.svg" id="18_75ux1"]
+[ext_resource type="Texture2D" uid="uid://ogpuquhkssjs" path="res://images/ui/checkbox_unchecked.svg" id="18_r4vei"]
+[ext_resource type="Script" uid="uid://brv4ysratd7mf" path="res://scripts/save_manager.gd" id="19_r4vei"]
+[ext_resource type="Texture2D" uid="uid://by1rt13th0t24" path="res://images/ui/EditIcon200.svg" id="20_f13ch"]
+[ext_resource type="Texture2D" uid="uid://dphbmsa0hjs0s" path="res://images/ui/OpenIcon.svg" id="22_cj2sj"]
+[ext_resource type="Texture2D" uid="uid://ds2grnx6wlkjx" path="res://images/ui/DownloadIcon.svg" id="23_75ux1"]
+[ext_resource type="Theme" uid="uid://cqyf7s5xv1te" path="res://menu_theme.tres" id="26_vxohh"]
 
 [sub_resource type="Gradient" id="Gradient_n6hn0"]
 colors = PackedColorArray(0.277514, 0.277503, 0.325496, 1, 0.113665, 0.113665, 0.113665, 1)
@@ -105,6 +116,162 @@ border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
 border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jy0k8"]
+texture = SubResource("GradientTexture2D_006op")
+
+[sub_resource type="Theme" id="Theme_mkej7"]
+Panel/styles/panel = SubResource("StyleBoxTexture_jy0k8")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_75ux1"]
+bg_color = Color(0.14509805, 0.16862746, 0.20392157, 1)
+
+[sub_resource type="Gradient" id="Gradient_75ux1"]
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_vxohh"]
+gradient = SubResource("Gradient_75ux1")
+width = 1
+
+[sub_resource type="Theme" id="Theme_cj2sj"]
+MenuButton/font_sizes/font_size = 50
+MenuButton/fonts/font = ExtResource("17_cj2sj")
+OptionButton/font_sizes/font_size = 50
+OptionButton/fonts/font = ExtResource("17_cj2sj")
+OptionButton/icons/arrow = ExtResource("18_75ux1")
+OptionButton/styles/normal = SubResource("StyleBoxFlat_75ux1")
+PopupMenu/font_sizes/font_separator_size = 50
+PopupMenu/font_sizes/font_size = 50
+PopupMenu/font_sizes/title_font_size = 50
+PopupMenu/fonts/font = ExtResource("17_cj2sj")
+PopupMenu/icons/radio_checked = SubResource("GradientTexture1D_vxohh")
+PopupMenu/icons/radio_unchecked = SubResource("GradientTexture1D_vxohh")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vxohh"]
+bg_color = Color(1, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tnp44"]
+bg_color = Color(0.8980392, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="Theme" id="Theme_6lyji"]
+Button/font_sizes/font_size = 50
+Button/fonts/font = ExtResource("17_cj2sj")
+Button/styles/focus = SubResource("StyleBoxFlat_vxohh")
+Button/styles/hover = SubResource("StyleBoxFlat_tnp44")
+Button/styles/normal = SubResource("StyleBoxFlat_vxohh")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cj2sj"]
+bg_color = Color(0.084299736, 0.099711664, 0.12539738, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.136547, 0.159107, 0.192948, 1)
+border_blend = true
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jy0k8"]
+bg_color = Color(0.14509805, 0.16862746, 0.20392157, 1)
+border_width_bottom = 7
+border_color = Color(0.11372549, 0.13333334, 0.16078432, 1)
+
+[sub_resource type="Theme" id="Theme_jl64f"]
+LineEdit/styles/normal = SubResource("StyleBoxFlat_jy0k8")
+
+[sub_resource type="Theme" id="Theme_f13ch"]
+default_font = ExtResource("17_cj2sj")
+CheckBox/font_sizes/font_size = 40
+CheckBox/fonts/font = ExtResource("17_cj2sj")
+CheckBox/icons/checked = ExtResource("17_3ohd7")
+CheckBox/icons/unchecked = ExtResource("18_r4vei")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6lyji"]
+bg_color = Color(0.21176471, 0.23921569, 0.2901961, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0.601223, 0.601223, 0.6012228, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ea1su"]
+bg_color = Color(0, 0.74509805, 0.03529412, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(6.9789587e-07, 0.4551959, 0.011988697, 1)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ysqru"]
+bg_color = Color(1.973361e-06, 0.57760006, 0.02008631, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(6.9789587e-07, 0.4551959, 0.011988697, 1)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t3lj4"]
+bg_color = Color(1, 0, 0, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.5924475, 2.201982e-06, 4.3317675e-07, 1)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oqw24"]
+bg_color = Color(0.79897434, 4.379898e-06, 6.738305e-07, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.5924475, 2.201982e-06, 4.3317675e-07, 1)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [node name="SpellCheck" type="Control"]
 layout_mode = 3
@@ -498,7 +665,7 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_3040f")
 text = "Back to lists"
 
 [node name="HomeBtn" type="Button" parent="CanvasLayer/QuizScene"]
-z_index = 2
+z_index = 10
 layout_mode = 0
 offset_left = 4.0
 offset_top = 4.0
@@ -515,7 +682,8 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -278.0
+offset_left = -573.0
+offset_right = -295.0
 offset_bottom = 137.0
 grow_horizontal = 0
 theme = ExtResource("2_nwt03")
@@ -528,9 +696,9 @@ icon_alignment = 1
 unique_name_in_owner = true
 layout_mode = 1
 offset_left = 145.0
-offset_top = 10.0
+offset_top = 14.0
 offset_right = 359.0
-offset_bottom = 134.0
+offset_bottom = 138.0
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.35
 theme = ExtResource("2_nwt03")
@@ -754,6 +922,7 @@ theme_override_constants/margin_right = 100
 theme_override_constants/margin_bottom = 100
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin"]
+visible = false
 layout_mode = 2
 theme_override_constants/margin_top = 100
 theme_override_constants/margin_bottom = 100
@@ -863,12 +1032,19 @@ text = "Practice Test"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="GradeSelect" type="HBoxContainer" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin"]
+[node name="GradeSelectTop" type="VBoxContainer" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="GradeSelect" type="HBoxContainer" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/GradeSelectTop"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
 theme_override_constants/separation = 50
 
-[node name="Grade1" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/GradeSelect"]
+[node name="Grade1" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/GradeSelectTop/GradeSelect"]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
@@ -876,7 +1052,7 @@ theme = ExtResource("2_nwt03")
 theme_override_font_sizes/font_size = 150
 text = "1st"
 
-[node name="Grade2" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/GradeSelect"]
+[node name="Grade2" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/GradeSelectTop/GradeSelect"]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
@@ -885,13 +1061,24 @@ theme_override_font_sizes/font_size = 150
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ptblg")
 text = "2nd"
 
-[node name="Grade3" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/GradeSelect"]
+[node name="Grade3" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/GradeSelectTop/GradeSelect"]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
 theme = ExtResource("2_nwt03")
 theme_override_font_sizes/font_size = 150
 text = "3rd"
+
+[node name="MyListBtn" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/GradeSelectTop"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_nwt03")
+theme_override_font_sizes/font_size = 100
+text = "My List"
 
 [node name="UnitSelect" type="GridContainer" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin"]
 unique_name_in_owner = true
@@ -908,6 +1095,7 @@ layout_mode = 2
 columns = 5
 
 [node name="HomeBtn" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu"]
+y_sort_enabled = true
 layout_mode = 0
 offset_left = 4.0
 offset_top = 4.0
@@ -1195,6 +1383,21 @@ grow_vertical = 2
 visible = false
 layout_mode = 2
 
+[node name="SwitchLangReady" type="Button" parent="CanvasLayer/MainMenu/ReadyMenu"]
+z_index = 5
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -278.0
+offset_bottom = 137.0
+grow_horizontal = 0
+theme = ExtResource("2_nwt03")
+theme_override_font_sizes/font_size = 50
+toggle_mode = true
+text = "Tiếng Việt"
+icon_alignment = 1
+
 [node name="Button" type="Button" parent="CanvasLayer/MainMenu"]
 visible = false
 layout_mode = 0
@@ -1210,6 +1413,401 @@ offset_top = 911.0
 offset_right = 323.0
 offset_bottom = 1041.0
 text = "Print csv"
+
+[node name="MyList" type="Panel" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+z_index = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = SubResource("Theme_mkej7")
+script = ExtResource("16_mkej7")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MyList"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 150
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MyList/MarginContainer"]
+layout_mode = 2
+
+[node name="MLPreview" type="Control" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="MyListNameDropdown" type="OptionButton" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_cj2sj")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("17_cj2sj")
+theme_override_font_sizes/font_size = 50
+alignment = 1
+selected = 0
+item_count = 2
+popup/item_0/text = "My List"
+popup/item_0/id = 0
+popup/item_1/text = "+ New List"
+popup/item_1/id = 1
+
+[node name="MyListNameInput" type="LineEdit" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("17_cj2sj")
+theme_override_font_sizes/font_size = 32
+placeholder_text = " My List Name"
+
+[node name="DelListBtn" type="Button" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer/MyListNameInput"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -85.0
+offset_top = -41.5
+offset_right = -5.0
+offset_bottom = 41.5
+grow_horizontal = 0
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_6lyji")
+text = "ー"
+
+[node name="MyListPreview" type="RichTextLabel" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer"]
+unique_name_in_owner = true
+clip_contents = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 8.0
+theme = ExtResource("7_avy18")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vqdc1")
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer/MyListPreview"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("6_uolxd")
+horizontal_scroll_mode = 3
+
+[node name="MyListVocabBoxes" type="VBoxContainer" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer/MyListPreview/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="MyListButtons" type="HBoxContainer" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.5
+theme_override_constants/separation = 50
+script = ExtResource("19_r4vei")
+
+[node name="SaveBtn" type="Button" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer/MyListButtons"]
+unique_name_in_owner = true
+z_index = 2
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_nwt03")
+icon = ExtResource("17_y8od1")
+icon_alignment = 1
+expand_icon = true
+
+[node name="ImportBtn" type="Button" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer/MyListButtons"]
+unique_name_in_owner = true
+z_index = 2
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_nwt03")
+icon = ExtResource("22_cj2sj")
+icon_alignment = 1
+expand_icon = true
+
+[node name="DownloadBtn" type="Button" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer/MyListButtons"]
+unique_name_in_owner = true
+z_index = 2
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_nwt03")
+icon = ExtResource("23_75ux1")
+icon_alignment = 1
+expand_icon = true
+
+[node name="EditBtn" type="Button" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer/MyListButtons"]
+unique_name_in_owner = true
+z_index = 2
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_nwt03")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cj2sj")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_cj2sj")
+toggle_mode = true
+icon = ExtResource("20_f13ch")
+icon_alignment = 1
+expand_icon = true
+
+[node name="MLSearchBar" type="Control" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AddWord" type="VBoxContainer" parent="CanvasLayer/MyList"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -878.0
+offset_top = 151.0
+offset_right = -61.0
+offset_bottom = -29.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="WordSearchBar" type="LineEdit" parent="CanvasLayer/MyList/AddWord"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_jl64f")
+theme_override_fonts/font = ExtResource("17_cj2sj")
+theme_override_font_sizes/font_size = 32
+placeholder_text = " Word or Unit (e.g. see, 見る, U2-2)"
+select_all_on_focus = true
+
+[node name="SearchLabel" type="RichTextLabel" parent="CanvasLayer/MyList/AddWord/WordSearchBar"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 0
+offset_top = -68.0
+offset_right = 817.0
+offset_bottom = 2.0
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 50
+text = "Search:"
+scroll_active = false
+
+[node name="MyListVocab" type="RichTextLabel" parent="CanvasLayer/MyList/AddWord"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 8.0
+theme = ExtResource("7_avy18")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vqdc1")
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/MyList/AddWord/MyListVocab"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("6_uolxd")
+
+[node name="MyListSearchBoxes" type="VBoxContainer" parent="CanvasLayer/MyList/AddWord/MyListVocab/ScrollContainer"]
+unique_name_in_owner = true
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MyList/AddWord"]
+layout_mode = 2
+theme_override_constants/margin_left = 70
+
+[node name="GradeToggles" type="HBoxContainer" parent="CanvasLayer/MyList/AddWord/MarginContainer"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+
+[node name="1年生" type="CheckBox" parent="CanvasLayer/MyList/AddWord/MarginContainer/GradeToggles"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_f13ch")
+button_pressed = true
+text = " 1年生"
+
+[node name="2年生" type="CheckBox" parent="CanvasLayer/MyList/AddWord/MarginContainer/GradeToggles"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_f13ch")
+button_pressed = true
+text = " 2年生"
+
+[node name="3年生" type="CheckBox" parent="CanvasLayer/MyList/AddWord/MarginContainer/GradeToggles"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_f13ch")
+button_pressed = true
+text = " 3年生"
+
+[node name="MyListBrowser" type="Panel" parent="CanvasLayer/MyList"]
+visible = false
+z_index = 5
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MyList/MyListBrowser"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 150
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="MyListSelect" type="GridContainer" parent="CanvasLayer/MyList/MyListBrowser/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+columns = 5
+
+[node name="MyListSelectLabel" type="RichTextLabel" parent="CanvasLayer/MyList/MyListBrowser"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 0
+offset_left = 100.0
+offset_top = 11.0
+offset_right = 1820.0
+offset_bottom = 161.0
+size_flags_vertical = 0
+theme = ExtResource("2_nwt03")
+text = "Select a list"
+horizontal_alignment = 1
+
+[node name="HomeBtn" type="Button" parent="CanvasLayer/MyList"]
+y_sort_enabled = true
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 141.0
+offset_bottom = 141.0
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_nwt03")
+icon = ExtResource("9_ptblg")
+icon_alignment = 1
+
+[node name="NextBtn" type="Button" parent="CanvasLayer/MyList"]
+y_sort_enabled = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -137.0
+offset_bottom = 137.0
+grow_horizontal = 0
+rotation = 3.1415927
+pivot_offset = Vector2(68.5, 68.5)
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_nwt03")
+icon = ExtResource("13_uolxd")
+icon_alignment = 1
+
+[node name="Confirmation" type="Panel" parent="CanvasLayer/MyList"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 447.0
+offset_top = 299.0
+offset_right = -447.0
+offset_bottom = -285.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6lyji")
+
+[node name="ConfirmationText" type="RichTextLabel" parent="CanvasLayer/MyList/Confirmation"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 285.0
+grow_horizontal = 2
+theme = ExtResource("2_nwt03")
+theme_override_font_sizes/normal_font_size = 90
+bbcode_enabled = true
+text = "Delete List?
+[s]My List[/s]
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MyList/Confirmation"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 176.0
+offset_top = -204.0
+offset_right = -176.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 50
+
+[node name="ConfirmYes" type="Button" parent="CanvasLayer/MyList/Confirmation/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("26_vxohh")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ea1su")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ysqru")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ysqru")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ysqru")
+text = "Yes"
+
+[node name="ConfirmNo" type="Button" parent="CanvasLayer/MyList/Confirmation/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("26_vxohh")
+theme_override_styles/normal = SubResource("StyleBoxFlat_t3lj4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oqw24")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oqw24")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_oqw24")
+text = "No"
 
 [node name="CSVHandler" type="Control" parent="."]
 unique_name_in_owner = true
@@ -1234,6 +1832,12 @@ unique_name_in_owner = true
 one_shot = true
 ignore_time_scale = true
 
+[node name="SaveManager" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 0
+script = ExtResource("19_r4vei")
+
 [connection signal="focus_entered" from="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/MarginContainer/SpellingInput" to="CanvasLayer/QuizScene" method="_on_spelling_input_focus_entered"]
 [connection signal="pressed" from="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/MarginContainer/Button" to="CanvasLayer/QuizScene" method="_focus_on_SpellingInput"]
 [connection signal="pressed" from="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/Margin/HBoxContainer/Pass" to="CanvasLayer/QuizScene" method="_skip_question"]
@@ -1255,9 +1859,10 @@ ignore_time_scale = true
 [connection signal="pressed" from="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/ModeSelect/TimeAttack" to="." method="_set_mode" binds= [1]]
 [connection signal="pressed" from="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/ModeSelect/Study" to="." method="_set_mode" binds= [0]]
 [connection signal="pressed" from="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/ModeSelect/PracticeTest" to="." method="_set_mode" binds= [2]]
-[connection signal="pressed" from="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/GradeSelect/Grade1" to="." method="_set_grade" binds= [1]]
-[connection signal="pressed" from="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/GradeSelect/Grade2" to="." method="_set_grade" binds= [2]]
-[connection signal="pressed" from="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/GradeSelect/Grade3" to="." method="_set_grade" binds= [3]]
+[connection signal="pressed" from="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/GradeSelectTop/GradeSelect/Grade1" to="." method="_set_grade" binds= [1]]
+[connection signal="pressed" from="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/GradeSelectTop/GradeSelect/Grade2" to="." method="_set_grade" binds= [2]]
+[connection signal="pressed" from="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/GradeSelectTop/GradeSelect/Grade3" to="." method="_set_grade" binds= [3]]
+[connection signal="pressed" from="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/GradeSelectTop/MyListBtn" to="CanvasLayer/MyList" method="_open_my_list_menu"]
 [connection signal="pressed" from="CanvasLayer/MainMenu/ListSelectMenu/HomeBtn" to="CanvasLayer/QuizScene" method="_go_home"]
 [connection signal="pressed" from="CanvasLayer/MainMenu/ListSelectMenu/BackBtn" to="." method="_go_back"]
 [connection signal="value_changed" from="CanvasLayer/MainMenu/ReadyMenu/TestTimer" to="." method="_set_wait_time"]
@@ -1267,4 +1872,21 @@ ignore_time_scale = true
 [connection signal="pressed" from="CanvasLayer/MainMenu/ReadyMenu/BackBtn" to="." method="_go_back"]
 [connection signal="pressed" from="CanvasLayer/MainMenu/Button" to="CanvasLayer/QuizScene" method="_start_quiz"]
 [connection signal="pressed" from="CanvasLayer/Button" to="SQLController" method="print_csv"]
+[connection signal="item_selected" from="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer/MyListNameDropdown" to="CanvasLayer/MyList" method="_select_list"]
+[connection signal="text_changed" from="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer/MyListNameInput" to="CanvasLayer/MyList" method="_update_my_list_name"]
+[connection signal="text_submitted" from="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer/MyListNameInput" to="CanvasLayer/MyList" method="_exit_edit_mode"]
+[connection signal="pressed" from="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer/MyListNameInput/DelListBtn" to="CanvasLayer/MyList" method="_delete_list_confirmation"]
+[connection signal="pressed" from="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer/MyListButtons/SaveBtn" to="CanvasLayer/MyList" method="save_list"]
+[connection signal="pressed" from="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer/MyListButtons/ImportBtn" to="SaveManager" method="_on_upload_pressed"]
+[connection signal="pressed" from="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer/MyListButtons/DownloadBtn" to="CanvasLayer/MyList" method="_export_lists"]
+[connection signal="pressed" from="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer/MyListButtons/EditBtn" to="CanvasLayer/MyList" method="edit_result_boxes"]
+[connection signal="focus_entered" from="CanvasLayer/MyList/AddWord/WordSearchBar" to="CanvasLayer/MyList" method="_exit_edit_mode"]
+[connection signal="text_changed" from="CanvasLayer/MyList/AddWord/WordSearchBar" to="CanvasLayer/MyList" method="_search_for_word"]
+[connection signal="toggled" from="CanvasLayer/MyList/AddWord/MarginContainer/GradeToggles/1年生" to="CanvasLayer/MyList" method="_toggle_grade" binds= [1]]
+[connection signal="toggled" from="CanvasLayer/MyList/AddWord/MarginContainer/GradeToggles/2年生" to="CanvasLayer/MyList" method="_toggle_grade" binds= [2]]
+[connection signal="toggled" from="CanvasLayer/MyList/AddWord/MarginContainer/GradeToggles/3年生" to="CanvasLayer/MyList" method="_toggle_grade" binds= [3]]
+[connection signal="pressed" from="CanvasLayer/MyList/HomeBtn" to="CanvasLayer/QuizScene" method="_go_home"]
+[connection signal="pressed" from="CanvasLayer/MyList/NextBtn" to="." method="_close_my_list_window"]
+[connection signal="pressed" from="CanvasLayer/MyList/Confirmation/HBoxContainer/ConfirmYes" to="CanvasLayer/MyList" method="_delete_list"]
+[connection signal="pressed" from="CanvasLayer/MyList/Confirmation/HBoxContainer/ConfirmNo" to="CanvasLayer/MyList" method="_hide_confirmation"]
 [connection signal="timeout" from="Timer" to="CanvasLayer/QuizScene/TimerDisplay" method="_on_timer_timeout"]

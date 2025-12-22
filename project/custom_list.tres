@@ -1,0 +1,25 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://bltxhliff3pgi"]
+
+[ext_resource type="FontFile" uid="uid://cb3y2lj6o0j73" path="res://assets/NotoSansJP-Medium.ttf" id="1_f6omf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2koec"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.84705883, 1, 0.47058824, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f6omf"]
+
+[resource]
+Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("1_f6omf")
+Button/styles/focus = SubResource("StyleBoxFlat_2koec")
+Button/styles/hover = SubResource("StyleBoxFlat_2koec")
+Button/styles/normal = SubResource("StyleBoxEmpty_f6omf")
+Button/styles/pressed = SubResource("StyleBoxFlat_2koec")
