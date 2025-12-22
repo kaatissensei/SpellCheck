@@ -1,0 +1,8 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="35" height="35">
+	<style>
+		.s0 { fill: #1f1f21 } 
+	</style>
+	<g id="Checkbox">
+		<path id="Unchecked" fill-rule="evenodd" class="s0" d="m100 0h300c55.23 0 100 44.77 100 100v300c0 55.23-44.77 100-100 100h-300c-55.23 0-100-44.77-100-100v-300c0-55.23 44.77-100 100-100z"/>
+	</g>
+</svg>

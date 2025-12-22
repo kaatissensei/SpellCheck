@@ -1,0 +1,12 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="200" height="200">
+	<style>
+		.s0 { fill: none;stroke: #ffffff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 30 } 
+		.s1 { fill: none;stroke: #ffffff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 25 } 
+		.s2 { fill: none;stroke: #ffffff;stroke-linejoin: round;stroke-width: 25 } 
+	</style>
+	<g id="Edit">
+		<path id="PaperOutline copy" fill-rule="evenodd" class="s0" d="m440 192.72v255.16c0 10.63-8.95 19.25-20 19.25h-340c-11.05 0-20-8.62-20-19.25v-352.27c0-10.63 8.95-19.25 20-19.25h238.34"/>
+		<path id="Pencil" fill-rule="evenodd" class="s1" d="m446.77 46.73l26.05 25.3c7.77 7.55 5.95 21.45-4.07 31.04l-25.64 24.59-209.65 200.83c-78.17 23.27-74.16 23.27-78.27 23.74l-0.72 0.09 0.02-0.78c0.14-1.12-0.2-0.75 25.11-76.12l208.37-199.6 26.58-25.39c10.02-9.59 24.45-11.25 32.22-3.7z"/>
+		<path id="Eraser line" fill-rule="evenodd" class="s2" d="m390.23 76.72l0.61-0.59 50.39 48.5-0.61 0.59z"/>
+	</g>
+</svg>

@@ -1,0 +1,29 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="300" height="300">
+	<style>
+		.s0 { fill: none;stroke: #ffffff;stroke-miterlimit:100;stroke-width: 37.5 } 
+		.s1 { fill: #ffffff } 
+	</style>
+	<g id="Stopwatch">
+		<path id="Border" fill-rule="evenodd" class="s0" d="m250 442.5c-89.86 0-162.5-72.64-162.5-162.5 0-89.86 72.64-162.5 162.5-162.5 89.86 0 162.5 72.64 162.5 162.5 0 89.86-72.64 162.5-162.5 162.5z"/>
+		<path id="Shape 5" fill-rule="evenodd" class="s1" d="m243 67.5h11.5c7.18 0 13 5.82 13 13v24c0 7.18-5.82 13-13 13h-11.5c-7.18 0-13-5.82-13-13v-24c0-7.18 5.82-13 13-13z"/>
+		<g id="Ticks">
+			<path id="Tick" fill-rule="evenodd" class="s1" d="m243.75 124.01h12.5v32.66h-12.5z"/>
+			<path id="Tick copy" fill-rule="evenodd" class="s1" d="m322.52 141.78l10.83 6.25-16.34 28.28-10.82-6.25z"/>
+			<path id="Tick copy 2" fill-rule="evenodd" class="s1" d="m381.86 196.56l6.24 10.82-28.29 16.33-6.24-10.83z"/>
+			<path id="Tick copy 3" fill-rule="evenodd" class="s1" d="m405.84 273.67l-0.01 12.5-32.66-0.02 0.01-12.5z"/>
+			<path id="Tick copy 4" fill-rule="evenodd" class="s1" d="m388.04 352.43l-6.26 10.82-28.27-16.34 6.25-10.82z"/>
+			<path id="Tick copy 5" fill-rule="evenodd" class="s1" d="m333.24 411.74l-10.83 6.24-16.31-28.29 10.83-6.25z"/>
+			<path id="Tick copy 6" fill-rule="evenodd" class="s1" d="m256.12 435.69l-12.5-0.01 0.02-32.66 12.5 0.01z"/>
+			<path id="Tick copy 7" fill-rule="evenodd" class="s1" d="m177.36 417.86l-10.82-6.26 16.36-28.27 10.82 6.26z"/>
+			<path id="Tick copy 8" fill-rule="evenodd" class="s1" d="m118.07 363.03l-6.24-10.84 28.31-16.29 6.24 10.83z"/>
+			<path id="Tick copy 9" fill-rule="evenodd" class="s1" d="m94.16 285.9l0.01-12.5 32.66 0.04-0.01 12.5z"/>
+			<path id="Tick copy 10" fill-rule="evenodd" class="s1" d="m112.02 207.15l6.27-10.82 28.26 16.37-6.27 10.82z"/>
+			<path id="Tick copy 11" fill-rule="evenodd" class="s1" d="m166.88 147.88l10.83-6.23 16.29 28.31-10.84 6.24z"/>
+		</g>
+		<path id="Shape 7" fill-rule="evenodd" class="s1" d="m250 301.44c-10.48 0-18.94-8.46-18.94-18.94 0-10.48 8.46-18.94 18.94-18.94 10.48 0 18.94 8.46 18.94 18.94 0 10.48-8.46 18.94-18.94 18.94z"/>
+		<path id="Hand" fill-rule="evenodd" class="s1" d="m262.5 290l-20-20 100-77.5z"/>
+		<path id="Shape 6" fill-rule="evenodd" class="s1" d="m213 35h74c7.18 0 13 5.82 13 13v24c0 7.18-5.82 13-13 13h-74c-7.18 0-13-5.82-13-13v-24c0-7.18 5.82-13 13-13z"/>
+		<path id="Shape 5 copy" fill-rule="evenodd" class="s1" d="m416.41 163.42c4.08 5.64 2.82 13.52-2.82 17.6l-6.81 4.93c-5.64 4.08-13.52 2.82-17.6-2.82-4.08-5.64-2.82-13.52 2.82-17.61l6.81-4.92c5.64-4.08 13.52-2.82 17.6 2.82z"/>
+		<path id="Shape 6 copy" fill-rule="evenodd" class="s1" d="m422.52 134.59l24.17 33.4c4.21 5.82 2.9 13.94-2.91 18.15l-6.17 4.47c-5.82 4.21-13.95 2.9-18.15-2.91l-24.17-33.4c-4.21-5.82-2.91-13.95 2.91-18.15l6.16-4.47c5.82-4.21 13.95-2.9 18.16 2.91z"/>
+	</g>
+</svg>

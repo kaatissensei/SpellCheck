@@ -1,0 +1,14 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="200" height="200">
+	<style>
+		.s0 { fill: none;stroke: #ffffff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 30 } 
+		.s1 { fill: #ffffff } 
+	</style>
+	<g id="Save">
+		<path id="RoundRect copy 2" fill-rule="evenodd" class="s0" d="m80 79h276.99l22.74 23.5c10.96 10.96 60.27 57.5 60.27 57.5v280c0 11.05-8.95 20-20 20h-340c-11.05 0-20-8.95-20-20v-341c0-11.05 8.95-20 20-20z"/>
+		<path id="LabelRect" fill-rule="evenodd" class="s0" d="m143 267h212.53c11.04 0 20 8.95 20 20v153c0 11.05-8.96 20-20 20h-212.53c-11.05 0-20-8.95-20-20v-153c0-11.05 8.95-20 20-20z"/>
+		<path id="Metal rect" fill-rule="evenodd" class="s0" d="m143.8 79h162.4c11.04 0 20 8.95 20 20v86c0 11.05-8.96 20-20 20h-162.4c-11.04 0-20-8.95-20-20v-86c0-11.05 8.96-20 20-20z"/>
+		<path id="Label line bottom" fill-rule="evenodd" class="s1" d="m184 375h133c5.52 0 10 4.48 10 10v10c0 5.52-4.48 10-10 10h-133c-5.52 0-10-4.48-10-10v-10c0-5.52 4.48-10 10-10z"/>
+		<path id="Label line top" fill-rule="evenodd" class="s1" d="m184 319h133c5.52 0 10 4.48 10 10v10c0 5.52-4.48 10-10 10h-133c-5.52 0-10-4.48-10-10v-10c0-5.52 4.48-10 10-10z"/>
+		<path id="Shape 15" fill-rule="evenodd" class="s0" d="m280 124v36h-16v-36z"/>
+	</g>
+</svg>

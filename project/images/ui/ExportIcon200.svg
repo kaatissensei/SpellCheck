@@ -1,0 +1,11 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="200" height="200">
+	<style>
+		.s0 { fill: none;stroke: #ffffff;stroke-linecap: square;stroke-linejoin: round;stroke-width: 30 } 
+		.s1 { fill: #ffffff } 
+	</style>
+	<g id="Export">
+		<path id="RoundRect" fill-rule="evenodd" class="s0" d="m329 189l91 0.16c11.05 0 20 8.95 20 20v230.84c0 11.05-8.95 20-20 20h-340c-11.05 0-20-8.95-20-20v-230.84c0-11.05 8.95-20 20-20l91-0.16"/>
+		<path id="ArrowPoint" fill-rule="evenodd" class="s1" d="m343.2 149.23h-185.87c-6.4 0-10.41-5.09-7.2-9.16l92.93-118.02c3.2-4.07 11.21-4.07 14.41 0l92.94 118.02c3.2 4.07-0.8 9.16-7.21 9.16z"/>
+		<path id="ArrowTail" fill-rule="evenodd" class="s1" d="m286.78 135.23v164c0 11.04-8.96 20-20 20h-33.59c-11.04 0-20-8.96-20-20v-164c0-11.05 8.96-20 20-20h33.59c11.04 0 20 8.95 20 20z"/>
+	</g>
+</svg>

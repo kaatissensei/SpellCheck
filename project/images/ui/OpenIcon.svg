@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100" height="100">
+	<style>
+		.s0 { fill: none;stroke: #ffffff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 30 } 
+	</style>
+	<g id="Open">
+		<path id="Shape 16 copy" fill-rule="evenodd" class="s0" d="m471.49 195.48l-60.45 220.52h-379.93l60.45-220.52z"/>
+		<path id="Shape 17 copy" fill-rule="evenodd" class="s0" d="m408.93 414.77h-379.93v-330.77h152.24l24.74 48.63 202.95 0.89v61.96"/>
+	</g>
+</svg>
