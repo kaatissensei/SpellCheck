@@ -91,8 +91,9 @@ func _select_unit(new_unit_num: String) -> void:
 		var custom_lists = %MyList._get_my_vocab_lists()
 		var i : int = 0
 		for list in custom_lists:
-			create_list_button(list, i)
-			i += 1
+			if list.size() > 0:
+				create_list_button(list, i)
+				i += 1
 	else:
 		unit_pages = $SQLController._get_page_nums(new_unit_num)
 		for page in unit_pages:
@@ -178,11 +179,14 @@ func _go_back(current_screen: String = Main.current_screen):
 		"UnitSelect":
 			show_list_select_menus(%GradeSelectTop)
 		"ListSelect":
-			show_list_select_menus(%UnitSelect)
+			if Main.use_my_list:
+				%MyList.visible = true
+			else:
+				show_list_select_menus(%UnitSelect)
 		"ReadyMenu":
 			show_list_select_menus(%ListSelect)
-			%ReadyMenu.visible = false
 			%ListSelectMenu.visible = true
+			%ReadyMenu.visible = false
 
 func _open_ready_menu():
 	%ReadyMenu.visible = true
@@ -199,6 +203,7 @@ func _toggle_vietnamese(toggled_on: bool) -> void:
 	%SwitchLang.visible = toggled_on
 
 func _close_my_list_window() -> void:
-	%MyList.save_list()
-	_select_unit("My_List")
+	if %MyList.my_lists[0].size() > 0:
+		%MyList.save_list()
+		_select_unit("My_List")
 	%MyList.visible = false
