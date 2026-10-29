@@ -204,11 +204,14 @@ func next_question():
 	%SpellingInput.grab_focus() #.grab_click_focus() #I don't think this works, but I guess it's not needed
 
 func _check_answer():
+	var regex = RegEx.new()
+	regex.compile("[~～˜⁓∼]") 
+
 	if %SpellingInput.text != "":
 		#Trim input
-		var guess: String = %SpellingInput.text.strip_edges().replace("’","'")
+		var guess: String = regex.sub(%SpellingInput.text,"",true).strip_edges()
 		guess_array[current_number-1] = guess
-		if guess == current_word.english.strip_edges().replace("’","'"):
+		if guess == regex.sub(current_word.english, "", true).strip_edges():
 			#make something green
 			is_correct(true)
 		else:
@@ -216,6 +219,8 @@ func _check_answer():
 			is_correct(false)
 			num_mistakes += 1
 			correct_array[current_number - 1] = false
+			print(guess)
+			print(current_word.english.strip_edges().replace("’","'").replace("～",""))
 		
 		unanswered_array.erase(current_number)
 		if unanswered_array.size() != 0:
