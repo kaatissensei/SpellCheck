@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dm3ul3p5ohrxu"]
+[gd_scene format=3 uid="uid://dm3ul3p5ohrxu"]
+
+[ext_resource type="Texture2D" uid="uid://csrxwyh30v455" path="res://images/ui/TimeAttackClearIcon_300.png" id="1_y5b0f"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gl8q8"]
 
-[node name="ListButton" type="Button"]
+[node name="ListButton" type="Button" unique_id=2136578534]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -13,3 +15,50 @@ size_flags_vertical = 3
 mouse_default_cursor_shape = 2
 theme_override_font_sizes/font_size = 32
 theme_override_styles/focus = SubResource("StyleBoxEmpty_gl8q8")
+
+[node name="BestTime" type="Button" parent="." unique_id=979634086]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -242.0
+offset_right = 242.0
+offset_bottom = 145.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 100
+text = "0:00.0"
+icon = ExtResource("1_y5b0f")
+flat = true
+expand_icon = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1522414828]
+visible = false
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 160.0
+grow_horizontal = 2
+
+[node name="Control" type="Control" parent="HBoxContainer" unique_id=890416707]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="Star" type="TextureRect" parent="HBoxContainer/Control" unique_id=1450151115]
+custom_minimum_size = Vector2(100, 160)
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 160.0
+texture = ExtResource("1_y5b0f")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BestTime" type="RichTextLabel" parent="HBoxContainer/Control" unique_id=1486424875]
+layout_mode = 0
+offset_left = 120.0
+offset_right = 561.0
+offset_bottom = 160.0
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 100
+text = "0:00"
+vertical_alignment = 1

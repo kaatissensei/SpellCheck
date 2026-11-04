@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://b31gwo4hvaj57"]
+[gd_scene format=3 uid="uid://b31gwo4hvaj57"]
 
 [ext_resource type="Script" uid="uid://gi5ofb00rg56" path="res://scripts/spell_check.gd" id="1_coeig"]
 [ext_resource type="Theme" uid="uid://hwydebsyhm38" path="res://main_theme.tres" id="2_nwt03"]
@@ -273,7 +273,7 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[node name="SpellCheck" type="Control"]
+[node name="SpellCheck" type="Control" unique_id=538953209]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -282,9 +282,9 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_coeig")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1382325893]
 
-[node name="QuizScene" type="Control" parent="CanvasLayer"]
+[node name="QuizScene" type="Control" parent="CanvasLayer" unique_id=1592451180]
 unique_name_in_owner = true
 layout_mode = 3
 anchors_preset = 15
@@ -294,7 +294,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_qkgq2")
 
-[node name="BG" type="TextureRect" parent="CanvasLayer/QuizScene"]
+[node name="BG" type="TextureRect" parent="CanvasLayer/QuizScene" unique_id=2056609951]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -304,7 +304,7 @@ grow_vertical = 2
 mouse_filter = 2
 texture = SubResource("GradientTexture2D_006op")
 
-[node name="HBoxContainer" type="BoxContainer" parent="CanvasLayer/QuizScene"]
+[node name="HBoxContainer" type="BoxContainer" parent="CanvasLayer/QuizScene" unique_id=702413864]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -312,18 +312,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="LBuffer" type="Control" parent="CanvasLayer/QuizScene/HBoxContainer"]
+[node name="LBuffer" type="Control" parent="CanvasLayer/QuizScene/HBoxContainer" unique_id=792737821]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/QuizScene/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/QuizScene/HBoxContainer" unique_id=2042974500]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
 
-[node name="TimerDisplayCenter" type="RichTextLabel" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer"]
+[node name="TimerDisplayCenter" type="RichTextLabel" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer" unique_id=1672430183]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
@@ -336,7 +336,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("9_g8vj4")
 
-[node name="NumberBoxes" type="MarginContainer" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer"]
+[node name="NumberBoxes" type="MarginContainer" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer" unique_id=913642941]
 visible = false
 layout_mode = 2
 size_flags_vertical = 3
@@ -346,88 +346,88 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 250
 theme_override_constants/margin_bottom = 20
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/NumberBoxes"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/NumberBoxes" unique_id=377625684]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
 theme_override_constants/separation = 15
 
-[node name="Button" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/NumberBoxes/HBoxContainer"]
+[node name="Button" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/NumberBoxes/HBoxContainer" unique_id=505715224]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("3_avy18")
 
-[node name="Button2" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/NumberBoxes/HBoxContainer"]
+[node name="Button2" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/NumberBoxes/HBoxContainer" unique_id=1002922989]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("3_avy18")
 
-[node name="Button3" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/NumberBoxes/HBoxContainer"]
+[node name="Button3" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/NumberBoxes/HBoxContainer" unique_id=911006503]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("3_avy18")
 
-[node name="Button4" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/NumberBoxes/HBoxContainer"]
+[node name="Button4" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/NumberBoxes/HBoxContainer" unique_id=400792642]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("3_avy18")
 
-[node name="Button5" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/NumberBoxes/HBoxContainer"]
+[node name="Button5" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/NumberBoxes/HBoxContainer" unique_id=1826683707]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("3_avy18")
 
-[node name="Button6" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/NumberBoxes/HBoxContainer"]
+[node name="Button6" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/NumberBoxes/HBoxContainer" unique_id=647905539]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("3_avy18")
 
-[node name="Button7" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/NumberBoxes/HBoxContainer"]
+[node name="Button7" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/NumberBoxes/HBoxContainer" unique_id=2067232428]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("3_avy18")
 
-[node name="Button8" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/NumberBoxes/HBoxContainer"]
+[node name="Button8" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/NumberBoxes/HBoxContainer" unique_id=2056727180]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("3_avy18")
 
-[node name="Button9" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/NumberBoxes/HBoxContainer"]
+[node name="Button9" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/NumberBoxes/HBoxContainer" unique_id=393397600]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("3_avy18")
 
-[node name="Button10" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/NumberBoxes/HBoxContainer"]
+[node name="Button10" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/NumberBoxes/HBoxContainer" unique_id=1911846445]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("3_avy18")
 
-[node name="Button11" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/NumberBoxes/HBoxContainer"]
+[node name="Button11" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/NumberBoxes/HBoxContainer" unique_id=2136933078]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("3_avy18")
 
-[node name="Button12" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/NumberBoxes/HBoxContainer"]
+[node name="Button12" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/NumberBoxes/HBoxContainer" unique_id=417779005]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("3_avy18")
 
-[node name="Button13" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/NumberBoxes/HBoxContainer"]
+[node name="Button13" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/NumberBoxes/HBoxContainer" unique_id=2045283765]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("3_avy18")
 
-[node name="Button14" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/NumberBoxes/HBoxContainer"]
+[node name="Button14" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/NumberBoxes/HBoxContainer" unique_id=1737320368]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("3_avy18")
 
-[node name="Button15" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/NumberBoxes/HBoxContainer"]
+[node name="Button15" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/NumberBoxes/HBoxContainer" unique_id=112358315]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("3_avy18")
 
-[node name="WordNumber" type="RichTextLabel" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer"]
+[node name="WordNumber" type="RichTextLabel" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer" unique_id=72664310]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -440,7 +440,7 @@ text = "5/12"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TimerProgress" type="ProgressBar" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer"]
+[node name="TimerProgress" type="ProgressBar" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer" unique_id=429226468]
 unique_name_in_owner = true
 visible = false
 custom_minimum_size = Vector2(1500, 0)
@@ -450,7 +450,7 @@ theme = ExtResource("2_nwt03")
 theme_override_colors/font_color = Color(0, 0, 0, 0)
 value = 80.0
 
-[node name="WordToSpell" type="RichTextLabel" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer"]
+[node name="WordToSpell" type="RichTextLabel" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer" unique_id=1133353172]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -461,14 +461,14 @@ theme_override_font_sizes/normal_font_size = 95
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer" unique_id=426074189]
 layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 2
 theme_override_constants/margin_left = 200
 theme_override_constants/margin_right = 200
 
-[node name="Underline" type="LineEdit" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/MarginContainer"]
+[node name="Underline" type="LineEdit" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/MarginContainer" unique_id=31756350]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -482,7 +482,7 @@ max_length = 20
 keep_editing_on_text_submit = true
 caret_blink = true
 
-[node name="SpellingInput" type="LineEdit" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/MarginContainer"]
+[node name="SpellingInput" type="LineEdit" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/MarginContainer" unique_id=1992643045]
 unique_name_in_owner = true
 z_index = 1
 layout_mode = 2
@@ -494,7 +494,7 @@ max_length = 20
 keep_editing_on_text_submit = true
 caret_blink = true
 
-[node name="Button" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/MarginContainer"]
+[node name="Button" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/MarginContainer" unique_id=1796470174]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_tya4r")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_tya4r")
@@ -502,12 +502,12 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_tya4r")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_tya4r")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_tya4r")
 
-[node name="Control" type="Control" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer"]
+[node name="Control" type="Control" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer" unique_id=960369369]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.1
 
-[node name="Margin" type="MarginContainer" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer"]
+[node name="Margin" type="MarginContainer" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer" unique_id=70204291]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/margin_left = 400
@@ -515,11 +515,11 @@ theme_override_constants/margin_top = 70
 theme_override_constants/margin_right = 400
 theme_override_constants/margin_bottom = 70
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/Margin"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/Margin" unique_id=82831092]
 layout_mode = 2
 theme_override_constants/separation = 50
 
-[node name="Pass" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/Margin/HBoxContainer"]
+[node name="Pass" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/Margin/HBoxContainer" unique_id=1575393230]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
@@ -533,7 +533,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ip23a")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_3040f")
 text = "Pass"
 
-[node name="Enter" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/Margin/HBoxContainer"]
+[node name="Enter" type="Button" parent="CanvasLayer/QuizScene/HBoxContainer/VBoxContainer/Margin/HBoxContainer" unique_id=1251971954]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
@@ -547,12 +547,12 @@ theme_override_styles/hover = ExtResource("4_avy18")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_ptblg")
 text = "Enter"
 
-[node name="RBuffer" type="Control" parent="CanvasLayer/QuizScene/HBoxContainer"]
+[node name="RBuffer" type="Control" parent="CanvasLayer/QuizScene/HBoxContainer" unique_id=737554600]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="ResultsPopup" type="TextureRect" parent="CanvasLayer/QuizScene"]
+[node name="ResultsPopup" type="TextureRect" parent="CanvasLayer/QuizScene" unique_id=137327537]
 unique_name_in_owner = true
 visible = false
 z_index = 2
@@ -565,7 +565,7 @@ grow_vertical = 2
 theme = ExtResource("6_uolxd")
 texture = SubResource("GradientTexture2D_3040f")
 
-[node name="Results" type="VBoxContainer" parent="CanvasLayer/QuizScene/ResultsPopup"]
+[node name="Results" type="VBoxContainer" parent="CanvasLayer/QuizScene/ResultsPopup" unique_id=1084083779]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -576,7 +576,7 @@ offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ResultsScore" type="RichTextLabel" parent="CanvasLayer/QuizScene/ResultsPopup/Results"]
+[node name="ResultsScore" type="RichTextLabel" parent="CanvasLayer/QuizScene/ResultsPopup/Results" unique_id=1367485192]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -587,23 +587,23 @@ text = "5/6"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/QuizScene/ResultsPopup/Results"]
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/QuizScene/ResultsPopup/Results" unique_id=917431833]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="ResultAnswers" type="VBoxContainer" parent="CanvasLayer/QuizScene/ResultsPopup/Results/ScrollContainer"]
+[node name="ResultAnswers" type="VBoxContainer" parent="CanvasLayer/QuizScene/ResultsPopup/Results/ScrollContainer" unique_id=1526879798]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/QuizScene/ResultsPopup/Results"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/QuizScene/ResultsPopup/Results" unique_id=2012174951]
 visible = false
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/QuizScene/ResultsPopup/Results/HBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/QuizScene/ResultsPopup/Results/HBoxContainer" unique_id=1483703609]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
@@ -616,7 +616,7 @@ text = "1.
 5."
 horizontal_alignment = 1
 
-[node name="Guesses" type="RichTextLabel" parent="CanvasLayer/QuizScene/ResultsPopup/Results/HBoxContainer"]
+[node name="Guesses" type="RichTextLabel" parent="CanvasLayer/QuizScene/ResultsPopup/Results/HBoxContainer" unique_id=313494445]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
@@ -628,13 +628,13 @@ cold
 graduation ceremony"
 horizontal_alignment = 1
 
-[node name="Answers" type="RichTextLabel" parent="CanvasLayer/QuizScene/ResultsPopup/Results/HBoxContainer"]
+[node name="Answers" type="RichTextLabel" parent="CanvasLayer/QuizScene/ResultsPopup/Results/HBoxContainer" unique_id=1279833857]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("7_avy18")
 
-[node name="TryAgain" type="Button" parent="CanvasLayer/QuizScene/ResultsPopup"]
+[node name="TryAgain" type="Button" parent="CanvasLayer/QuizScene/ResultsPopup" unique_id=1394359870]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -650,7 +650,7 @@ theme_override_styles/hover = ExtResource("4_avy18")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ptblg")
 text = "Try again"
 
-[node name="BackToLists" type="Button" parent="CanvasLayer/QuizScene/ResultsPopup"]
+[node name="BackToLists" type="Button" parent="CanvasLayer/QuizScene/ResultsPopup" unique_id=481189279]
 visible = false
 layout_mode = 0
 offset_left = 3.0
@@ -664,7 +664,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ip23a")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_3040f")
 text = "Back to lists"
 
-[node name="HomeBtn" type="Button" parent="CanvasLayer/QuizScene"]
+[node name="HomeBtn" type="Button" parent="CanvasLayer/QuizScene" unique_id=92986558]
 z_index = 10
 layout_mode = 0
 offset_left = 4.0
@@ -676,7 +676,7 @@ theme = ExtResource("2_nwt03")
 icon = ExtResource("9_ptblg")
 icon_alignment = 1
 
-[node name="SwitchLang" type="Button" parent="CanvasLayer/QuizScene"]
+[node name="SwitchLang" type="Button" parent="CanvasLayer/QuizScene" unique_id=37076245]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
@@ -693,7 +693,7 @@ toggle_mode = true
 text = "Tiếng Việt"
 icon_alignment = 1
 
-[node name="TimerDisplay" type="RichTextLabel" parent="CanvasLayer/QuizScene"]
+[node name="TimerDisplay" type="RichTextLabel" parent="CanvasLayer/QuizScene" unique_id=1466631381]
 unique_name_in_owner = true
 layout_mode = 1
 offset_left = 145.0
@@ -710,7 +710,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("9_g8vj4")
 
-[node name="Restart" type="Button" parent="CanvasLayer/QuizScene"]
+[node name="Restart" type="Button" parent="CanvasLayer/QuizScene" unique_id=1104671771]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -726,7 +726,7 @@ theme_override_font_sizes/font_size = 60
 icon = ExtResource("11_jy0k8")
 icon_alignment = 1
 
-[node name="MainMenu" type="Control" parent="CanvasLayer"]
+[node name="MainMenu" type="Control" parent="CanvasLayer" unique_id=909875720]
 unique_name_in_owner = true
 z_index = 1
 layout_mode = 3
@@ -736,7 +736,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="TextureRect" parent="CanvasLayer/MainMenu"]
+[node name="ColorRect" type="TextureRect" parent="CanvasLayer/MainMenu" unique_id=216984147]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -745,7 +745,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_006op")
 
-[node name="StartMenu" type="Control" parent="CanvasLayer/MainMenu"]
+[node name="StartMenu" type="Control" parent="CanvasLayer/MainMenu" unique_id=917503066]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -754,7 +754,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/MainMenu/StartMenu"]
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/MainMenu/StartMenu" unique_id=1899497803]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -772,7 +772,7 @@ text = "Spell Check"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/StartMenu"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/StartMenu" unique_id=1972605147]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -784,11 +784,11 @@ theme_override_constants/margin_left = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 100
 
-[node name="ModeSelect" type="BoxContainer" parent="CanvasLayer/MainMenu/StartMenu/MarginContainer"]
+[node name="ModeSelect" type="BoxContainer" parent="CanvasLayer/MainMenu/StartMenu/MarginContainer" unique_id=1770141000]
 layout_mode = 2
 theme_override_constants/separation = 50
 
-[node name="TimeAttack" type="Button" parent="CanvasLayer/MainMenu/StartMenu/MarginContainer/ModeSelect"]
+[node name="TimeAttack" type="Button" parent="CanvasLayer/MainMenu/StartMenu/MarginContainer/ModeSelect" unique_id=57232980]
 custom_minimum_size = Vector2(300, 400)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -801,7 +801,7 @@ icon = ExtResource("11_vqdc1")
 icon_alignment = 1
 vertical_icon_alignment = 0
 
-[node name="TimeAttackTxt" type="RichTextLabel" parent="CanvasLayer/MainMenu/StartMenu/MarginContainer/ModeSelect/TimeAttack"]
+[node name="TimeAttackTxt" type="RichTextLabel" parent="CanvasLayer/MainMenu/StartMenu/MarginContainer/ModeSelect/TimeAttack" unique_id=874891406]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -815,7 +815,7 @@ text = "Time Attack"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Study" type="Button" parent="CanvasLayer/MainMenu/StartMenu/MarginContainer/ModeSelect"]
+[node name="Study" type="Button" parent="CanvasLayer/MainMenu/StartMenu/MarginContainer/ModeSelect" unique_id=1067316287]
 custom_minimum_size = Vector2(0, 630)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -828,7 +828,7 @@ theme_override_font_sizes/font_size = 150
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ptblg")
 text = "Study"
 
-[node name="PracticeTest" type="Button" parent="CanvasLayer/MainMenu/StartMenu/MarginContainer/ModeSelect"]
+[node name="PracticeTest" type="Button" parent="CanvasLayer/MainMenu/StartMenu/MarginContainer/ModeSelect" unique_id=1242889965]
 custom_minimum_size = Vector2(300, 400)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -841,7 +841,7 @@ icon = ExtResource("12_uolxd")
 icon_alignment = 1
 vertical_icon_alignment = 0
 
-[node name="PracticeTestTxt" type="RichTextLabel" parent="CanvasLayer/MainMenu/StartMenu/MarginContainer/ModeSelect/PracticeTest"]
+[node name="PracticeTestTxt" type="RichTextLabel" parent="CanvasLayer/MainMenu/StartMenu/MarginContainer/ModeSelect/PracticeTest" unique_id=1815611397]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -855,7 +855,7 @@ text = "Practice Test"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="LoadList" type="Button" parent="CanvasLayer/MainMenu/StartMenu"]
+[node name="LoadList" type="Button" parent="CanvasLayer/MainMenu/StartMenu" unique_id=1447876241]
 unique_name_in_owner = true
 visible = false
 z_index = 100
@@ -871,7 +871,7 @@ theme_override_font_sizes/font_size = 50
 text = "Load List
 "
 
-[node name="LaguageBtn" type="Button" parent="CanvasLayer/MainMenu/StartMenu"]
+[node name="LaguageBtn" type="Button" parent="CanvasLayer/MainMenu/StartMenu" unique_id=689071730]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -888,7 +888,7 @@ toggle_mode = true
 text = "Tiếng Việt"
 icon_alignment = 1
 
-[node name="ListSelectMenu" type="Control" parent="CanvasLayer/MainMenu"]
+[node name="ListSelectMenu" type="Control" parent="CanvasLayer/MainMenu" unique_id=1083766581]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
@@ -898,7 +898,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ListSelectMenuText" type="RichTextLabel" parent="CanvasLayer/MainMenu/ListSelectMenu"]
+[node name="ListSelectMenuText" type="RichTextLabel" parent="CanvasLayer/MainMenu/ListSelectMenu" unique_id=464711429]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 10
@@ -910,7 +910,7 @@ theme_override_font_sizes/normal_font_size = 150
 text = "Spell Check"
 horizontal_alignment = 1
 
-[node name="ListSelectMargin" type="MarginContainer" parent="CanvasLayer/MainMenu/ListSelectMenu"]
+[node name="ListSelectMargin" type="MarginContainer" parent="CanvasLayer/MainMenu/ListSelectMenu" unique_id=1996054143]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -923,54 +923,53 @@ theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 100
 theme_override_constants/margin_bottom = 100
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin" unique_id=1661861667]
 visible = false
 layout_mode = 2
 theme_override_constants/margin_top = 100
 theme_override_constants/margin_bottom = 100
 
-[node name="TimeLimitSelect" type="HBoxContainer" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/MarginContainer"]
+[node name="TimeLimitSelect" type="HBoxContainer" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/MarginContainer" unique_id=1264764945]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="1min" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/MarginContainer/TimeLimitSelect"]
+[node name="1min" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/MarginContainer/TimeLimitSelect" unique_id=988968973]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("2_nwt03")
 text = "1 min."
 
-[node name="2min" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/MarginContainer/TimeLimitSelect"]
+[node name="2min" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/MarginContainer/TimeLimitSelect" unique_id=403822534]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("2_nwt03")
 text = "2 min."
 
-[node name="3min" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/MarginContainer/TimeLimitSelect"]
+[node name="3min" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/MarginContainer/TimeLimitSelect" unique_id=2040600525]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("2_nwt03")
 text = "3 min."
 
-[node name="4min" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/MarginContainer/TimeLimitSelect"]
+[node name="4min" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/MarginContainer/TimeLimitSelect" unique_id=1349878315]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("2_nwt03")
 text = "4 min."
 
-[node name="5min" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/MarginContainer/TimeLimitSelect"]
+[node name="5min" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/MarginContainer/TimeLimitSelect" unique_id=688107058]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("2_nwt03")
 text = "5 min."
 
-[node name="ModeSelect" type="HBoxContainer" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin"]
+[node name="ModeSelect" type="HBoxContainer" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin" unique_id=1942148906]
 unique_name_in_owner = true
-visible = false
 layout_mode = 2
 theme_override_constants/separation = 50
 
-[node name="TimeAttack" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/ModeSelect"]
-custom_minimum_size = Vector2(400, 500)
+[node name="TimeAttack" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/ModeSelect" unique_id=1652491492]
+custom_minimum_size = Vector2(400, 450)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -982,7 +981,7 @@ icon = ExtResource("11_vqdc1")
 icon_alignment = 1
 vertical_icon_alignment = 0
 
-[node name="TimeAttackTxt" type="RichTextLabel" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/ModeSelect/TimeAttack"]
+[node name="TimeAttackTxt" type="RichTextLabel" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/ModeSelect/TimeAttack" unique_id=917579193]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -996,7 +995,7 @@ text = "Time Attack"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Study" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/ModeSelect"]
+[node name="Study" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/ModeSelect" unique_id=689838602]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 1.2
@@ -1007,8 +1006,8 @@ theme_override_font_sizes/font_size = 150
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ptblg")
 text = "Study"
 
-[node name="PracticeTest" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/ModeSelect"]
-custom_minimum_size = Vector2(400, 500)
+[node name="PracticeTest" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/ModeSelect" unique_id=1906492626]
+custom_minimum_size = Vector2(400, 450)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -1020,7 +1019,7 @@ icon = ExtResource("12_uolxd")
 icon_alignment = 1
 vertical_icon_alignment = 0
 
-[node name="PracticeTestTxt" type="RichTextLabel" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/ModeSelect/PracticeTest"]
+[node name="PracticeTestTxt" type="RichTextLabel" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/ModeSelect/PracticeTest" unique_id=1195823686]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -1034,19 +1033,20 @@ text = "Practice Test"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="GradeSelectTop" type="VBoxContainer" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin"]
+[node name="GradeSelectTop" type="VBoxContainer" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin" unique_id=1091665025]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="GradeSelect" type="HBoxContainer" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/GradeSelectTop"]
+[node name="GradeSelect" type="HBoxContainer" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/GradeSelectTop" unique_id=2099718516]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 3.0
 theme_override_constants/separation = 50
 
-[node name="Grade1" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/GradeSelectTop/GradeSelect"]
+[node name="Grade1" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/GradeSelectTop/GradeSelect" unique_id=1600794421]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
@@ -1054,7 +1054,7 @@ theme = ExtResource("2_nwt03")
 theme_override_font_sizes/font_size = 150
 text = "1st"
 
-[node name="Grade2" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/GradeSelectTop/GradeSelect"]
+[node name="Grade2" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/GradeSelectTop/GradeSelect" unique_id=1858012369]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
@@ -1063,7 +1063,7 @@ theme_override_font_sizes/font_size = 150
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ptblg")
 text = "2nd"
 
-[node name="Grade3" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/GradeSelectTop/GradeSelect"]
+[node name="Grade3" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/GradeSelectTop/GradeSelect" unique_id=2083485926]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
@@ -1071,7 +1071,7 @@ theme = ExtResource("2_nwt03")
 theme_override_font_sizes/font_size = 150
 text = "3rd"
 
-[node name="MyListBtn" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/GradeSelectTop"]
+[node name="MyListBtn" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin/GradeSelectTop" unique_id=1451313464]
 custom_minimum_size = Vector2(700, 0)
 layout_mode = 2
 size_flags_horizontal = 6
@@ -1082,7 +1082,7 @@ theme = ExtResource("2_nwt03")
 theme_override_font_sizes/font_size = 100
 text = "My List"
 
-[node name="UnitSelect" type="GridContainer" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin"]
+[node name="UnitSelect" type="GridContainer" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin" unique_id=113215408]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
@@ -1090,13 +1090,13 @@ theme_override_constants/h_separation = 40
 theme_override_constants/v_separation = 20
 columns = 5
 
-[node name="ListSelect" type="GridContainer" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin"]
+[node name="ListSelect" type="GridContainer" parent="CanvasLayer/MainMenu/ListSelectMenu/ListSelectMargin" unique_id=1037174747]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 columns = 5
 
-[node name="HomeBtn" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu"]
+[node name="HomeBtn" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu" unique_id=1956546257]
 y_sort_enabled = true
 layout_mode = 0
 offset_left = 4.0
@@ -1108,7 +1108,7 @@ theme = ExtResource("2_nwt03")
 icon = ExtResource("9_ptblg")
 icon_alignment = 1
 
-[node name="BackBtn" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu"]
+[node name="BackBtn" type="Button" parent="CanvasLayer/MainMenu/ListSelectMenu" unique_id=1255268705]
 layout_mode = 0
 offset_left = 142.0
 offset_top = 4.0
@@ -1119,7 +1119,7 @@ theme = ExtResource("2_nwt03")
 icon = ExtResource("13_uolxd")
 icon_alignment = 1
 
-[node name="ReadyMenu" type="Control" parent="CanvasLayer/MainMenu"]
+[node name="ReadyMenu" type="Control" parent="CanvasLayer/MainMenu" unique_id=675546505]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
@@ -1129,7 +1129,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ListPreview" type="RichTextLabel" parent="CanvasLayer/MainMenu/ReadyMenu"]
+[node name="ListPreview" type="RichTextLabel" parent="CanvasLayer/MainMenu/ReadyMenu" unique_id=572906059]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 172.0
@@ -1161,7 +1161,7 @@ eighteen
 20"
 horizontal_alignment = 1
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/MainMenu/ReadyMenu/ListPreview"]
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/MainMenu/ReadyMenu/ListPreview" unique_id=1482471965]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1171,14 +1171,14 @@ grow_vertical = 2
 theme = ExtResource("6_uolxd")
 horizontal_scroll_mode = 3
 
-[node name="ListPreviewBoxes" type="VBoxContainer" parent="CanvasLayer/MainMenu/ReadyMenu/ListPreview/ScrollContainer"]
+[node name="ListPreviewBoxes" type="VBoxContainer" parent="CanvasLayer/MainMenu/ReadyMenu/ListPreview/ScrollContainer" unique_id=1030258083]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 0
 
-[node name="ListPreviewLabel" type="RichTextLabel" parent="CanvasLayer/MainMenu/ReadyMenu"]
+[node name="ListPreviewLabel" type="RichTextLabel" parent="CanvasLayer/MainMenu/ReadyMenu" unique_id=194359970]
 unique_name_in_owner = true
 z_index = 5
 layout_mode = 0
@@ -1193,7 +1193,7 @@ scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="TestTimer" type="HSlider" parent="CanvasLayer/MainMenu/ReadyMenu"]
+[node name="TestTimer" type="HSlider" parent="CanvasLayer/MainMenu/ReadyMenu" unique_id=832367103]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 6
@@ -1215,7 +1215,7 @@ rounded = true
 tick_count = 5
 ticks_on_borders = true
 
-[node name="TestTimerLabel" type="RichTextLabel" parent="CanvasLayer/MainMenu/ReadyMenu/TestTimer"]
+[node name="TestTimerLabel" type="RichTextLabel" parent="CanvasLayer/MainMenu/ReadyMenu/TestTimer" unique_id=628258124]
 layout_mode = 0
 offset_left = 7.0
 offset_top = -100.0
@@ -1228,7 +1228,7 @@ scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="Minutes1" type="RichTextLabel" parent="CanvasLayer/MainMenu/ReadyMenu/TestTimer"]
+[node name="Minutes1" type="RichTextLabel" parent="CanvasLayer/MainMenu/ReadyMenu/TestTimer" unique_id=104693247]
 layout_mode = 0
 offset_left = -39.0
 offset_top = 56.0
@@ -1239,7 +1239,7 @@ theme_override_font_sizes/normal_font_size = 40
 text = "1 min."
 horizontal_alignment = 1
 
-[node name="Minutes2" type="RichTextLabel" parent="CanvasLayer/MainMenu/ReadyMenu/TestTimer"]
+[node name="Minutes2" type="RichTextLabel" parent="CanvasLayer/MainMenu/ReadyMenu/TestTimer" unique_id=1882403393]
 layout_mode = 0
 offset_left = 123.0
 offset_top = 56.0
@@ -1251,7 +1251,7 @@ text = "2 min."
 scroll_active = false
 horizontal_alignment = 1
 
-[node name="Minutes3" type="RichTextLabel" parent="CanvasLayer/MainMenu/ReadyMenu/TestTimer"]
+[node name="Minutes3" type="RichTextLabel" parent="CanvasLayer/MainMenu/ReadyMenu/TestTimer" unique_id=606275359]
 layout_mode = 0
 offset_left = 286.0
 offset_top = 56.0
@@ -1262,7 +1262,7 @@ theme_override_font_sizes/normal_font_size = 40
 text = "3 min."
 horizontal_alignment = 1
 
-[node name="Minutes4" type="RichTextLabel" parent="CanvasLayer/MainMenu/ReadyMenu/TestTimer"]
+[node name="Minutes4" type="RichTextLabel" parent="CanvasLayer/MainMenu/ReadyMenu/TestTimer" unique_id=586361890]
 layout_mode = 0
 offset_left = 448.0
 offset_top = 56.0
@@ -1273,7 +1273,7 @@ theme_override_font_sizes/normal_font_size = 40
 text = "4 min."
 horizontal_alignment = 1
 
-[node name="Minutes5" type="RichTextLabel" parent="CanvasLayer/MainMenu/ReadyMenu/TestTimer"]
+[node name="Minutes5" type="RichTextLabel" parent="CanvasLayer/MainMenu/ReadyMenu/TestTimer" unique_id=308157980]
 layout_mode = 0
 offset_left = 611.0
 offset_top = 56.0
@@ -1284,7 +1284,7 @@ theme_override_font_sizes/normal_font_size = 40
 text = "5 min."
 horizontal_alignment = 1
 
-[node name="TestWordNumber" type="HSlider" parent="CanvasLayer/MainMenu/ReadyMenu"]
+[node name="TestWordNumber" type="HSlider" parent="CanvasLayer/MainMenu/ReadyMenu" unique_id=1923424849]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 6
@@ -1306,7 +1306,7 @@ rounded = true
 tick_count = 5
 ticks_on_borders = true
 
-[node name="TestWordNumLabel" type="RichTextLabel" parent="CanvasLayer/MainMenu/ReadyMenu/TestWordNumber"]
+[node name="TestWordNumLabel" type="RichTextLabel" parent="CanvasLayer/MainMenu/ReadyMenu/TestWordNumber" unique_id=1532408006]
 layout_mode = 0
 offset_left = 7.0
 offset_top = -100.0
@@ -1319,7 +1319,7 @@ scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="TestWordNumVal" type="RichTextLabel" parent="CanvasLayer/MainMenu/ReadyMenu/TestWordNumber"]
+[node name="TestWordNumVal" type="RichTextLabel" parent="CanvasLayer/MainMenu/ReadyMenu/TestWordNumber" unique_id=223991936]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 213.0
@@ -1333,7 +1333,7 @@ scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="TestStartBtn" type="Button" parent="CanvasLayer/MainMenu/ReadyMenu"]
+[node name="TestStartBtn" type="Button" parent="CanvasLayer/MainMenu/ReadyMenu" unique_id=2002395167]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -1350,7 +1350,7 @@ mouse_default_cursor_shape = 2
 theme = ExtResource("6_uolxd")
 text = "Start"
 
-[node name="HomeBtn" type="Button" parent="CanvasLayer/MainMenu/ReadyMenu"]
+[node name="HomeBtn" type="Button" parent="CanvasLayer/MainMenu/ReadyMenu" unique_id=846931370]
 layout_mode = 0
 offset_left = 4.0
 offset_top = 4.0
@@ -1361,7 +1361,7 @@ theme = ExtResource("2_nwt03")
 icon = ExtResource("9_ptblg")
 icon_alignment = 1
 
-[node name="BackBtn" type="Button" parent="CanvasLayer/MainMenu/ReadyMenu"]
+[node name="BackBtn" type="Button" parent="CanvasLayer/MainMenu/ReadyMenu" unique_id=1978894934]
 layout_mode = 0
 offset_left = 3.0
 offset_top = 142.0
@@ -1372,7 +1372,7 @@ theme = ExtResource("2_nwt03")
 icon = ExtResource("13_uolxd")
 icon_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MainMenu/ReadyMenu"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MainMenu/ReadyMenu" unique_id=724634194]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -1381,11 +1381,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/ReadyMenu/HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/ReadyMenu/HBoxContainer" unique_id=277246502]
 visible = false
 layout_mode = 2
 
-[node name="SwitchLangReady" type="Button" parent="CanvasLayer/MainMenu/ReadyMenu"]
+[node name="SwitchLangReady" type="Button" parent="CanvasLayer/MainMenu/ReadyMenu" unique_id=262499250]
+unique_name_in_owner = true
+visible = false
 z_index = 5
 layout_mode = 1
 anchors_preset = 1
@@ -1400,7 +1402,7 @@ toggle_mode = true
 text = "Tiếng Việt"
 icon_alignment = 1
 
-[node name="Button" type="Button" parent="CanvasLayer/MainMenu"]
+[node name="Button" type="Button" parent="CanvasLayer/MainMenu" unique_id=912049427]
 visible = false
 layout_mode = 0
 offset_right = 522.0
@@ -1408,7 +1410,7 @@ offset_bottom = 165.0
 theme = ExtResource("2_nwt03")
 text = "Load word"
 
-[node name="Button" type="Button" parent="CanvasLayer"]
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=432636921]
 visible = false
 offset_left = 76.0
 offset_top = 911.0
@@ -1416,7 +1418,7 @@ offset_right = 323.0
 offset_bottom = 1041.0
 text = "Print csv"
 
-[node name="MyList" type="Panel" parent="CanvasLayer"]
+[node name="MyList" type="Panel" parent="CanvasLayer" unique_id=2088907269]
 unique_name_in_owner = true
 visible = false
 z_index = 1
@@ -1429,7 +1431,7 @@ mouse_filter = 1
 theme = SubResource("Theme_mkej7")
 script = ExtResource("16_mkej7")
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MyList"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MyList" unique_id=1817807275]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1442,14 +1444,14 @@ theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 100
 theme_override_constants/margin_bottom = 50
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MyList/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MyList/MarginContainer" unique_id=443487087]
 layout_mode = 2
 
-[node name="MLPreview" type="Control" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer"]
+[node name="MLPreview" type="Control" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer" unique_id=1068028042]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview" unique_id=862054394]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1458,7 +1460,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 10
 
-[node name="MyListNameDropdown" type="OptionButton" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer"]
+[node name="MyListNameDropdown" type="OptionButton" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer" unique_id=1236254171]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -1474,7 +1476,7 @@ popup/item_0/id = 0
 popup/item_1/text = "+ New List"
 popup/item_1/id = 1
 
-[node name="MyListNameInput" type="LineEdit" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer"]
+[node name="MyListNameInput" type="LineEdit" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer" unique_id=1486592386]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
@@ -1483,7 +1485,7 @@ theme_override_fonts/font = ExtResource("17_cj2sj")
 theme_override_font_sizes/font_size = 32
 placeholder_text = " My List Name"
 
-[node name="DelListBtn" type="Button" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer/MyListNameInput"]
+[node name="DelListBtn" type="Button" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer/MyListNameInput" unique_id=1408439807]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -1500,7 +1502,7 @@ mouse_default_cursor_shape = 2
 theme = SubResource("Theme_6lyji")
 text = "ー"
 
-[node name="MyListPreview" type="RichTextLabel" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer"]
+[node name="MyListPreview" type="RichTextLabel" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer" unique_id=373175397]
 unique_name_in_owner = true
 clip_contents = false
 layout_mode = 2
@@ -1511,7 +1513,7 @@ theme = ExtResource("7_avy18")
 theme_override_styles/normal = SubResource("StyleBoxFlat_vqdc1")
 horizontal_alignment = 1
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer/MyListPreview"]
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer/MyListPreview" unique_id=1577123508]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1521,21 +1523,21 @@ grow_vertical = 2
 theme = ExtResource("6_uolxd")
 horizontal_scroll_mode = 3
 
-[node name="MyListVocabBoxes" type="VBoxContainer" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer/MyListPreview/ScrollContainer"]
+[node name="MyListVocabBoxes" type="VBoxContainer" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer/MyListPreview/ScrollContainer" unique_id=428507067]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 0
 
-[node name="MyListButtons" type="HBoxContainer" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer"]
+[node name="MyListButtons" type="HBoxContainer" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer" unique_id=1818303111]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 1.5
 theme_override_constants/separation = 50
 script = ExtResource("19_r4vei")
 
-[node name="SaveBtn" type="Button" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer/MyListButtons"]
+[node name="SaveBtn" type="Button" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer/MyListButtons" unique_id=918135168]
 unique_name_in_owner = true
 z_index = 2
 layout_mode = 2
@@ -1546,7 +1548,7 @@ icon = ExtResource("17_y8od1")
 icon_alignment = 1
 expand_icon = true
 
-[node name="ImportBtn" type="Button" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer/MyListButtons"]
+[node name="ImportBtn" type="Button" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer/MyListButtons" unique_id=1689561067]
 unique_name_in_owner = true
 z_index = 2
 layout_mode = 2
@@ -1557,7 +1559,7 @@ icon = ExtResource("22_cj2sj")
 icon_alignment = 1
 expand_icon = true
 
-[node name="DownloadBtn" type="Button" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer/MyListButtons"]
+[node name="DownloadBtn" type="Button" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer/MyListButtons" unique_id=296155794]
 unique_name_in_owner = true
 z_index = 2
 layout_mode = 2
@@ -1568,7 +1570,7 @@ icon = ExtResource("23_75ux1")
 icon_alignment = 1
 expand_icon = true
 
-[node name="EditBtn" type="Button" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer/MyListButtons"]
+[node name="EditBtn" type="Button" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer/MyListButtons" unique_id=1688507263]
 unique_name_in_owner = true
 z_index = 2
 layout_mode = 2
@@ -1582,11 +1584,11 @@ icon = ExtResource("20_f13ch")
 icon_alignment = 1
 expand_icon = true
 
-[node name="MLSearchBar" type="Control" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer"]
+[node name="MLSearchBar" type="Control" parent="CanvasLayer/MyList/MarginContainer/HBoxContainer" unique_id=1286126440]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="AddWord" type="VBoxContainer" parent="CanvasLayer/MyList"]
+[node name="AddWord" type="VBoxContainer" parent="CanvasLayer/MyList" unique_id=1378896053]
 layout_mode = 1
 anchors_preset = 11
 anchor_left = 1.0
@@ -1600,7 +1602,7 @@ grow_horizontal = 0
 grow_vertical = 2
 theme_override_constants/separation = 50
 
-[node name="WordSearchBar" type="LineEdit" parent="CanvasLayer/MyList/AddWord"]
+[node name="WordSearchBar" type="LineEdit" parent="CanvasLayer/MyList/AddWord" unique_id=813048656]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
@@ -1611,7 +1613,7 @@ theme_override_font_sizes/font_size = 32
 placeholder_text = " Word or Unit (e.g. see, 見る, U2-2)"
 select_all_on_focus = true
 
-[node name="SearchLabel" type="RichTextLabel" parent="CanvasLayer/MyList/AddWord/WordSearchBar"]
+[node name="SearchLabel" type="RichTextLabel" parent="CanvasLayer/MyList/AddWord/WordSearchBar" unique_id=831552867]
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 0
 offset_top = -68.0
@@ -1622,7 +1624,7 @@ theme_override_font_sizes/normal_font_size = 50
 text = "Search:"
 scroll_active = false
 
-[node name="MyListVocab" type="RichTextLabel" parent="CanvasLayer/MyList/AddWord"]
+[node name="MyListVocab" type="RichTextLabel" parent="CanvasLayer/MyList/AddWord" unique_id=1276468371]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -1632,7 +1634,7 @@ theme = ExtResource("7_avy18")
 theme_override_styles/normal = SubResource("StyleBoxFlat_vqdc1")
 horizontal_alignment = 1
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/MyList/AddWord/MyListVocab"]
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/MyList/AddWord/MyListVocab" unique_id=23788303]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1641,7 +1643,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("6_uolxd")
 
-[node name="MyListSearchBoxes" type="VBoxContainer" parent="CanvasLayer/MyList/AddWord/MyListVocab/ScrollContainer"]
+[node name="MyListSearchBoxes" type="VBoxContainer" parent="CanvasLayer/MyList/AddWord/MyListVocab/ScrollContainer" unique_id=427958178]
 unique_name_in_owner = true
 clip_contents = true
 layout_mode = 2
@@ -1649,36 +1651,36 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MyList/AddWord"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MyList/AddWord" unique_id=860870207]
 layout_mode = 2
 theme_override_constants/margin_left = 70
 
-[node name="GradeToggles" type="HBoxContainer" parent="CanvasLayer/MyList/AddWord/MarginContainer"]
+[node name="GradeToggles" type="HBoxContainer" parent="CanvasLayer/MyList/AddWord/MarginContainer" unique_id=134811976]
 custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
 
-[node name="1年生" type="CheckBox" parent="CanvasLayer/MyList/AddWord/MarginContainer/GradeToggles"]
+[node name="1年生" type="CheckBox" parent="CanvasLayer/MyList/AddWord/MarginContainer/GradeToggles" unique_id=2063449289]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = SubResource("Theme_f13ch")
 button_pressed = true
 text = " 1年生"
 
-[node name="2年生" type="CheckBox" parent="CanvasLayer/MyList/AddWord/MarginContainer/GradeToggles"]
+[node name="2年生" type="CheckBox" parent="CanvasLayer/MyList/AddWord/MarginContainer/GradeToggles" unique_id=1644783288]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = SubResource("Theme_f13ch")
 button_pressed = true
 text = " 2年生"
 
-[node name="3年生" type="CheckBox" parent="CanvasLayer/MyList/AddWord/MarginContainer/GradeToggles"]
+[node name="3年生" type="CheckBox" parent="CanvasLayer/MyList/AddWord/MarginContainer/GradeToggles" unique_id=2048019192]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = SubResource("Theme_f13ch")
 button_pressed = true
 text = " 3年生"
 
-[node name="MyListBrowser" type="Panel" parent="CanvasLayer/MyList"]
+[node name="MyListBrowser" type="Panel" parent="CanvasLayer/MyList" unique_id=2037105005]
 visible = false
 z_index = 5
 layout_mode = 1
@@ -1688,7 +1690,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MyList/MyListBrowser"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MyList/MyListBrowser" unique_id=1866985097]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1700,12 +1702,12 @@ theme_override_constants/margin_top = 150
 theme_override_constants/margin_right = 100
 theme_override_constants/margin_bottom = 100
 
-[node name="MyListSelect" type="GridContainer" parent="CanvasLayer/MyList/MyListBrowser/MarginContainer"]
+[node name="MyListSelect" type="GridContainer" parent="CanvasLayer/MyList/MyListBrowser/MarginContainer" unique_id=1368268711]
 unique_name_in_owner = true
 layout_mode = 2
 columns = 5
 
-[node name="MyListSelectLabel" type="RichTextLabel" parent="CanvasLayer/MyList/MyListBrowser"]
+[node name="MyListSelectLabel" type="RichTextLabel" parent="CanvasLayer/MyList/MyListBrowser" unique_id=209575027]
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 0
 offset_left = 100.0
@@ -1717,7 +1719,7 @@ theme = ExtResource("2_nwt03")
 text = "Select a list"
 horizontal_alignment = 1
 
-[node name="HomeBtn" type="Button" parent="CanvasLayer/MyList"]
+[node name="HomeBtn" type="Button" parent="CanvasLayer/MyList" unique_id=343568735]
 y_sort_enabled = true
 layout_mode = 0
 offset_left = 4.0
@@ -1729,7 +1731,7 @@ theme = ExtResource("2_nwt03")
 icon = ExtResource("9_ptblg")
 icon_alignment = 1
 
-[node name="NextBtn" type="Button" parent="CanvasLayer/MyList"]
+[node name="NextBtn" type="Button" parent="CanvasLayer/MyList" unique_id=814021550]
 y_sort_enabled = true
 layout_mode = 1
 anchors_preset = 1
@@ -1745,7 +1747,7 @@ theme = ExtResource("2_nwt03")
 icon = ExtResource("13_uolxd")
 icon_alignment = 1
 
-[node name="Confirmation" type="Panel" parent="CanvasLayer/MyList"]
+[node name="Confirmation" type="Panel" parent="CanvasLayer/MyList" unique_id=1829087805]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
@@ -1760,7 +1762,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_6lyji")
 
-[node name="ConfirmationText" type="RichTextLabel" parent="CanvasLayer/MyList/Confirmation"]
+[node name="ConfirmationText" type="RichTextLabel" parent="CanvasLayer/MyList/Confirmation" unique_id=688129660]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -1775,7 +1777,7 @@ text = "Delete List?
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MyList/Confirmation"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MyList/Confirmation" unique_id=976889415]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -1789,7 +1791,7 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/separation = 50
 
-[node name="ConfirmYes" type="Button" parent="CanvasLayer/MyList/Confirmation/HBoxContainer"]
+[node name="ConfirmYes" type="Button" parent="CanvasLayer/MyList/Confirmation/HBoxContainer" unique_id=602883]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
@@ -1800,7 +1802,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ysqru")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ysqru")
 text = "Yes"
 
-[node name="ConfirmNo" type="Button" parent="CanvasLayer/MyList/Confirmation/HBoxContainer"]
+[node name="ConfirmNo" type="Button" parent="CanvasLayer/MyList/Confirmation/HBoxContainer" unique_id=1765238228]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
@@ -1811,30 +1813,30 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_oqw24")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_oqw24")
 text = "No"
 
-[node name="CSVHandler" type="Control" parent="."]
+[node name="CSVHandler" type="Control" parent="." unique_id=563156066]
 unique_name_in_owner = true
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("5_ma4da")
 
-[node name="CSVFile" type="Node" parent="."]
+[node name="CSVFile" type="Node" parent="." unique_id=1811572954]
 unique_name_in_owner = true
 script = ExtResource("10_3040f")
 
-[node name="SQLController" type="Control" parent="."]
+[node name="SQLController" type="Control" parent="." unique_id=702343055]
 unique_name_in_owner = true
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("12_3wx56")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=1241418011]
 unique_name_in_owner = true
 one_shot = true
 ignore_time_scale = true
 
-[node name="SaveManager" type="Control" parent="."]
+[node name="SaveManager" type="Control" parent="." unique_id=145586118]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 0
@@ -1872,6 +1874,7 @@ script = ExtResource("19_r4vei")
 [connection signal="pressed" from="CanvasLayer/MainMenu/ReadyMenu/TestStartBtn" to="CanvasLayer/QuizScene" method="_start_quiz"]
 [connection signal="pressed" from="CanvasLayer/MainMenu/ReadyMenu/HomeBtn" to="CanvasLayer/QuizScene" method="_go_home"]
 [connection signal="pressed" from="CanvasLayer/MainMenu/ReadyMenu/BackBtn" to="." method="_go_back"]
+[connection signal="toggled" from="CanvasLayer/MainMenu/ReadyMenu/SwitchLangReady" to="CanvasLayer/QuizScene" method="_switch_ready_language"]
 [connection signal="pressed" from="CanvasLayer/MainMenu/Button" to="CanvasLayer/QuizScene" method="_start_quiz"]
 [connection signal="pressed" from="CanvasLayer/Button" to="SQLController" method="print_csv"]
 [connection signal="item_selected" from="CanvasLayer/MyList/MarginContainer/HBoxContainer/MLPreview/VBoxContainer/MyListNameDropdown" to="CanvasLayer/MyList" method="_select_list"]
