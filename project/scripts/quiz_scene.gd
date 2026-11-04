@@ -109,8 +109,13 @@ func _ready_list():
 			%TestTimer.visible = true
 			%TestWordNumber.visible = true
 
-func switch_ready_language():
-	pass
+func _switch_ready_language(toggled : bool):
+	for i in range(%ListPreviewBoxes.get_children().size()):
+		%ListPreviewBoxes.get_child(i)._set_third_lang_visible(toggled)
+	if toggled:
+		%ListPreview.size.x = 900
+	else:
+		%ListPreview.size.x = 812
 
 func populate_list_preview():
 	#Clear children first
@@ -122,7 +127,8 @@ func populate_list_preview():
 		var row_num : int = i + 1
 		var japanese_text : String = current_list[i].japanese
 		var answer_text : String = current_list[i].english
-		new_row._load(row_num, japanese_text, answer_text, 30)
+		var third_text : String = current_list[i].third_lang
+		new_row._load(row_num, japanese_text, answer_text, 30, third_text)
 
 func _redo_quiz():
 	var prev_list : Array
@@ -205,7 +211,7 @@ func next_question():
 
 func _check_answer():
 	var regex = RegEx.new()
-	regex.compile("[~～˜⁓∼]") 
+	regex.compile("[~～˜⁓∼]")
 
 	if %SpellingInput.text != "":
 		#Trim input
@@ -303,7 +309,7 @@ func _change_test_word_num(new_num : float):
 func _change_language(toggled_on: bool) -> void:
 	#var lang = "Vietnamese"
 	if toggled_on:
-		%WordToSpell.text = current_word.vietnamese
+		%WordToSpell.text = current_word.third_lang
 		%SwitchLang.text = "日本語"
 	else:
 		%WordToSpell.text = current_word.japanese

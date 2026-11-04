@@ -201,6 +201,7 @@ func _set_wait_time(new_time : float):
 func _toggle_vietnamese(toggled_on: bool) -> void:
 	Main.vietnamese_on = toggled_on
 	%SwitchLang.visible = toggled_on
+	%SwitchLangReady.visible = toggled_on
 
 func _close_my_list_window() -> void:
 	if %MyList.my_lists[0].size() > 0:
